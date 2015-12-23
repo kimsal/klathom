@@ -17,10 +17,45 @@ border-top:1px dotted #999999;
 }
 #short_slide{
 	height:40px;
+	background-color:#6FF;
 }
 .breaking-news {
     display: block;
     height: 29px;
     margin-bottom: 15px;
     overflow: hidden;
+}
+.slide_top{
+	background-color:#999;
+	height:250px;	
+}
+.banner_top{
+	background-color:#CCC;
+	height:250px;	
+}
+.left{
+	min-height:500px;
+	background-color:#039;	
+}
+.center{
+	min-height:500px;
+	background-color:#096;	
+}
+.right{
+	min-height:1000px;
+	background-color:#999;	
+}
+.latest-review{
+	min-height:40px;background-color:#03C;	
+	margin-top:5px;margin-bottom:5px;
+}
+.latest_review_box{
+height:120px;
+background-color:#CCC;
+margin-bottom:3px;	
+border-bottom:1px dotted #666666;
+}
+.footer{
+	height:50px;
+	background-color:#099;	
 }
