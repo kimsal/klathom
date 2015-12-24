@@ -17,7 +17,7 @@ border-top:1px dotted #999999;
 }
 #short_slide{
 	height:40px;
-	background-color:#6FF;
+    padding:0px;
 }
 .breaking-news {
     display: block;
@@ -55,6 +55,15 @@ background-color:#CCC;
 margin-bottom:3px;	
 border-bottom:1px dotted #666666;
 }
+
+/*breaking new */
+ul li:nth-child(even) a{color:rgba(0, 0, 0, 0.47) ; font-size:17px;}
+ul li:nth-child(odd) a{color:#000000}
+ul li a:hover{
+    color: #000000;
+}
+
+/*endo of breaking news*/
 .footer{
 	height:50px;
 	background-color:#099;	
