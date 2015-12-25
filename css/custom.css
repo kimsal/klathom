@@ -253,12 +253,13 @@ padding:0px;
 }
 .center_image:hover{
 	border-radius:5px;
-  
-
     border:inset 4px #000000;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-
-
+}
+.box_right{
+	margin-top:0px;	
+	border-bottom:1px dotted #999;
+	padding:10px 2px;
 }
