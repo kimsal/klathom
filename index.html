@@ -10,6 +10,8 @@
 <!-- jQuery library -->
 <script src="js/jquery.min.js"></script>
 <script src="js/custome.js"></script>
+<script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 <script src="js/modernizr.js"></script>
 <link rel="shortcut icon" type="image/png" href="img/Logo.png" />
 <title>ខ្លាធំ​</title>
@@ -26,16 +28,48 @@
 </div>
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="menu_top1">
-	Menu 1
-</div>
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="menu_top2">
-	Menu 2
-</div>
+	<!--sart menu 1-->
+    <nav class="navbar-default" role="navigation" style="background-color: #F6F6F6">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
+        </div>
+        <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav myover">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Health</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Health</a></li>
+
+            </ul>
+            <div class="col-sm-3 col-md-3 pull-right">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="What do you want?" name="q">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--end of menu 1-->
+</div>
+<div style="clear: both;float: none;"></div>
 <div class="container">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="short_slide">
         <div class="row" style="margin:0px;padding:0px; margin-top: 1px;">
-            <div class=" col-sm-2 col-xs-12" style="padding:0px;background-color: blue ">
+            <div class=" col-sm-2 col-xs-12" style="padding:0px;background-color:#264C84; ">
                 <h4 style=" text-align:center;color: #ffffff">Breaking New</h4>
             </div>
             <div class=" col-sm-9 col-xs-12 mymarq " >
@@ -61,7 +95,7 @@
                 </marquee>
 
             </div>
-            <div class="col-xs-12 col-sm-1"  style="padding:0px;background-color: blue; "">
+            <div class="col-xs-12 col-sm-1"  style="padding:0px;background-color: #264C84">
                 <h4 style=" text-align:center;color: #ffffff">ព័តមានថ្មី</h4>
             </div>
         </div>
@@ -253,7 +287,42 @@
 					slide					
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 footer">
-	footer
+            <div class="row" style="margin:0px;padding:0px; margin-top: 1px;">
+                <div class=" col-sm-2 col-xs-12" style="padding:0px;background-color:#264C84; ">
+                    <h4 style=" text-align:center;color: #ffffff">Breaking New</h4>
+                </div>
+                <div class=" col-sm-9 col-xs-12 mymarq " >
+                    <marquee behavior="scroll" scrollamount="3" direction="left">
+                        <ul style="margin-top: 7px; ">
+                            <li style="display: inline; margin-left: 2px;">
+                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
+                            </li>
+                            <li style="display: inline; margin-left: 2px;">
+                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
+                            </li>
+                            <li style="display: inline; margin-left: 2px;">
+                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
+                            </li>
+                            <li style="display: inline; margin-left: 2px;">
+                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
+                            </li>
+                            <li style="display: inline; margin-left: 2px;">
+                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
+                            </li>
+
+                        </ul>
+                    </marquee>
+
+                </div>
+                <div class="col-xs-12 col-sm-1"  style="padding:0px;background-color: #264C84">
+                    <h4 style=" text-align:center;color: #ffffff">ព័តមានថ្មី</h4>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-sm-12 myfoot">
+
+            </div>
+        </div>
 </div>
 </div><!--close containner-->
 
