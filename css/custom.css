@@ -305,17 +305,36 @@ a.expand {
 
 /*footer  */
 .myfoot{
-    background-color:rgba(0, 0, 0, 0.68);
+    background-color:#333333;
+    padding-top: 30px;
+    padding-bottom: 90px;
 }
 .listfooter{
     list-style: none;
     margin-top: 14px;
-    border-bottom:  thin #ffffff dotted;
+    border-bottom:1px dotted rgba(0, 0, 0, 0.22);
+    line-height: 26px;
 
+}
+.fbcon1{
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    border-radius: 100%;
+    float: left;
+    margin-left: 10px;
+}
+.la1{
+    color: #ffffff;
 }
 #leg1{
     color:#000000;
-    font-size: 17px;
+    font-size: 14px;
+    padding-top: 25px;
+}
+#leg1:hover{
+    text-decoration: underline;
+    color: #ffffff;
 }
 .ab{
     font-size: 16px;
