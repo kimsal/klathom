@@ -242,37 +242,44 @@ a.expand {
 
 
 /*End style for image:hover left*/
-<<<<<<< HEAD
 
 
 /*start of menu1 */
 .myover li{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
-    color: #070605;
 }
 .myover{
     padding-left: 85px;
 }
 .myover li:hover{
     color: #ffffff;
-    background-color:#ff8619;
-    text-decoration: underline;
+    background-color:#ced0cd;
 }
-.myover li a{
-    color: red;
+.myover li a:hover{
+    color: #ffffff;
 }
 
 /*end of menu1 */
 
 /*footer  */
 .myfoot{
-    height: 250px;
-    background-color:#000000;
+    background-color:rgba(0, 0, 0, 0.68);
 }
+.listfooter{
+    list-style: none;
+    margin-top: 14px;
+    border-bottom:  thin #ffffff dotted;
 
-/*end of footer*/
-=======
+}
+#leg1{
+    color:#000000;
+    font-size: 17px;
+}
+.ab{
+    font-size: 16px;
+   padding-top: 15px;
+}
 .left_image{
 margin:0px;
 padding:0px;	
