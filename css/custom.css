@@ -13,9 +13,12 @@ border-top:1px dotted #999999;
     background-color: rgba(223, 196, 228, 0.26);
 	padding:0px;
 }
+.banner_top_ads1{
+padding:0px;	
+}
 banner_top .banner_top_ads{
 	width:100%;
-	margin-top:10px;	
+	margin:0px;	
 }
 body{
     background-color:#FFFFFF;
@@ -44,6 +47,7 @@ border-top:1px dotted #999999;
 .slide_top{
 	background-color:#999;
 	height:250px;	
+	margin-top:4px;
 }
 .left{
 	min-height:500px;
@@ -210,6 +214,10 @@ a.expand {
 /* ============================================================
   EFFECT 5 - ICON BORDER ANIMATE
 ============================================================ */
+
+#effect-5{
+	width:100%;padding:0px;
+}
 #effect-5 .overlay {
   top: 0;
   bottom: 0;
