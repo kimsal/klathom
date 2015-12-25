@@ -11,6 +11,11 @@ height:110px;
 border-bottom:1px dotted #999999;
 border-top:1px dotted #999999;
     background-color: rgba(223, 196, 228, 0.26);
+	padding:0px;
+}
+banner_top .banner_top_ads{
+	width:100%;
+	margin-top:10px;	
 }
 body{
     background-color:#FFFFFF;
