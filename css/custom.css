@@ -9,13 +9,16 @@ text-decoration:none;
 #banner_top{
 height:110px;
 border-bottom:1px dotted #999999;
-border-top:1px dotted #999999;	
+border-top:1px dotted #999999;
+    background-color: rgba(223, 196, 228, 0.26);
+}
+body{
+    background-color:#FFFFFF;
 }
 #menu_top1{
-height:45px;
-background-color:#f6f6f6;	
 border-bottom:1px dotted #999999;
-border-top:1px dotted #999999;	
+border-top:1px dotted #999999;
+    padding:0px;
 }
 #menu_top2{
 height:40px;
@@ -69,7 +72,8 @@ ul li a:hover{
 /*endo of breaking news*/
 .footer{
 	height:50px;
-	background-color:#099;	
+    border-bottom: solid thin rgba(0, 0, 0, 0.47);
+    padding: 0;
 }
 .box_left{
 	margin-top:10px;	
@@ -238,6 +242,37 @@ a.expand {
 
 
 /*End style for image:hover left*/
+<<<<<<< HEAD
+
+
+/*start of menu1 */
+.myover li{
+    font-size: 16px;
+    font-weight: 500;
+    color: #070605;
+}
+.myover{
+    padding-left: 85px;
+}
+.myover li:hover{
+    color: #ffffff;
+    background-color:#ff8619;
+    text-decoration: underline;
+}
+.myover li a{
+    color: red;
+}
+
+/*end of menu1 */
+
+/*footer  */
+.myfoot{
+    height: 250px;
+    background-color:#000000;
+}
+
+/*end of footer*/
+=======
 .left_image{
 margin:0px;
 padding:0px;	
