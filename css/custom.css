@@ -52,16 +52,26 @@ border-top:1px dotted #999999;
 	background-color:#999;	
 }
 .latest-review{
-	min-height:40px;background-color:#03C;	
-	margin-top:5px;margin-bottom:5px;
+	min-height:29px;
+	background-color:#CCC;	
+	margin-top:5px;
+	margin-bottom:5px;
 }
 .latest_review_box{
-height:120px;
-background-color:#CCC;
-margin-bottom:3px;	
-border-bottom:1px dotted #666666;
+height:auto;
+margin-bottom:3px;
 }
-
+.img, .text {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.img {
+	float: left;
+	margin-right: 10px; 
+}
+.text {
+	float: left;
+}
 /*breaking new */
 ul li:nth-child(even) a{color:rgba(0, 0, 0, 0.47) ; font-size:17px;}
 ul li:nth-child(odd) a{color:#000000}
