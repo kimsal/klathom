@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+
 a{
 color:#000;
 text-decoration:none;	
@@ -66,19 +68,32 @@ border-top:1px dotted #999999;
 	margin-bottom:5px;
 }
 .latest_review_box{
-height:auto;
-margin-bottom:3px;
+	padding-left:0px;
+	margin-left:0px;
+	border-bottom:1px dotted #CCC;
+	padding-bottom:15px;
+	padding-top:15px;
 }
-.img, .text {
-	padding-top: 5px;
-	padding-bottom: 5px;
+.latest_review_box a{
+	color: #232323;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "Titillium Web",sans-serif;
 }
-.img {
-	float: left;
-	margin-right: 10px; 
+.latest_review_box a:hover {
+	text-decoration: underline;
 }
-.text {
-	float: left;
+.latest_review_box p {
+	color: #264c84;
+	font-size: 12px;
+}
+.latest_review_box span {
+	font-style: italic;
+	font-size: 12px;
+}
+.img_review {
+	margin-left:0px;
+	padding-left:0px
 }
 /*breaking new */
 div div .mymarq{
