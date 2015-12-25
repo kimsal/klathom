@@ -11,6 +11,14 @@ height:110px;
 border-bottom:1px dotted #999999;
 border-top:1px dotted #999999;
     background-color: rgba(223, 196, 228, 0.26);
+	padding:0px;
+}
+.banner_top_ads1{
+padding:0px;	
+}
+banner_top .banner_top_ads{
+	width:100%;
+	margin:0px;	
 }
 body{
     background-color:#FFFFFF;
@@ -39,6 +47,7 @@ border-top:1px dotted #999999;
 .slide_top{
 	background-color:#999;
 	height:250px;	
+	margin-top:4px;
 }
 .left{
 	min-height:500px;
@@ -49,7 +58,6 @@ border-top:1px dotted #999999;
 }
 .right{
 	min-height:1000px;
-	background-color:#999;	
 }
 .latest-review{
 	min-height:29px;
@@ -73,9 +81,13 @@ margin-bottom:3px;
 	float: left;
 }
 /*breaking new */
-ul li:nth-child(even) a{color:rgba(0, 0, 0, 0.47) ; font-size:17px;}
-ul li:nth-child(odd) a{color:#000000}
-ul li a:hover{
+div div .mymarq{
+	background-color:#EEE;
+	
+}
+.mymarq ul li:nth-child(even) a{color:rgba(0, 0, 0, 0.47) ;color:#999;}
+.mymarq ul li:nth-child(odd) a{color:#000033;}
+.mymarq ul li a:hover{
     color: #000000;
 }
 
@@ -212,6 +224,10 @@ a.expand {
 /* ============================================================
   EFFECT 5 - ICON BORDER ANIMATE
 ============================================================ */
+
+#effect-5{
+	width:100%;padding:0px;
+}
 #effect-5 .overlay {
   top: 0;
   bottom: 0;
@@ -252,38 +268,49 @@ a.expand {
 
 
 /*End style for image:hover left*/
-<<<<<<< HEAD
 
 
 /*start of menu1 */
 .myover li{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
-    color: #070605;
 }
 .myover{
     padding-left: 85px;
 }
 .myover li:hover{
     color: #ffffff;
-    background-color:#ff8619;
-    text-decoration: underline;
+    background-color:#ced0cd;
 }
-.myover li a{
-    color: red;
+.myover li a:hover{
+    color: #ffffff;
 }
 
 /*end of menu1 */
 
 /*footer  */
 .myfoot{
-    height: 250px;
-    background-color:#000000;
+    background-color:rgba(0, 0, 0, 0.68);
 }
+.listfooter{
+    list-style: none;
+    margin-top: 14px;
+    border-bottom:  thin #ffffff dotted;
 
-/*end of footer*/
-=======
+}
+#leg1{
+    color:#000000;
+    font-size: 17px;
+}
+.ab{
+    font-size: 16px;
+   padding-top: 15px;
+}
 .left_image{
+margin:0px;
+padding:0px;	
+}
+.right_image{
 margin:0px;
 padding:0px;	
 }
@@ -304,8 +331,61 @@ padding:0px;
     border-radius: 5px;
 }
 .box_right{
-	margin-top:0px;	
+	margin-top:14px;	
+	font-weight:bold;
+	padding:0px;
 	border-bottom:1px dotted #999;
 	padding:10px 2px;
+	border-bottom:1px dotted #666666;
 }
+.left_image{
+	padding:0px;
+	margin:0px;
+}
+.right_title{
+	font-size:16px;	
+	padding-top:0px;
+	padding-bottom:10px;
+	padding-left:10px;
+	padding-right:0px;
+}
+.box_right a:hover{
+	color:#009;
+}
+
+/* ============================================================
+  EFFECT 6 - ICON BOUNCE IN
+============================================================ */
+#effect-6 .overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+#effect-6 .overlay i.expand {
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
+}
+#effect-6 .img.hover .overlay {
+  opacity: 0.5;
+  
+}
+#effect-6 .img.hover .overlay i.expand {
+  top: 50%;
+  margin-top: -30px;
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------ *\
+
+
+
 
