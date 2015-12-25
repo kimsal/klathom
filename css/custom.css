@@ -11,6 +11,14 @@ height:110px;
 border-bottom:1px dotted #999999;
 border-top:1px dotted #999999;
     background-color: rgba(223, 196, 228, 0.26);
+	padding:0px;
+}
+.banner_top_ads1{
+padding:0px;	
+}
+banner_top .banner_top_ads{
+	width:100%;
+	margin:0px;	
 }
 body{
     background-color:#FFFFFF;
@@ -39,6 +47,7 @@ border-top:1px dotted #999999;
 .slide_top{
 	background-color:#999;
 	height:250px;	
+	margin-top:4px;
 }
 .left{
 	min-height:500px;
@@ -51,16 +60,26 @@ border-top:1px dotted #999999;
 	min-height:1000px;
 }
 .latest-review{
-	min-height:40px;background-color:#03C;	
-	margin-top:5px;margin-bottom:5px;
+	min-height:29px;
+	background-color:#CCC;	
+	margin-top:5px;
+	margin-bottom:5px;
 }
 .latest_review_box{
-height:120px;
-background-color:#CCC;
-margin-bottom:3px;	
-border-bottom:1px dotted #666666;
+height:auto;
+margin-bottom:3px;
 }
-
+.img, .text {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.img {
+	float: left;
+	margin-right: 10px; 
+}
+.text {
+	float: left;
+}
 /*breaking new */
 div div .mymarq{
 	background-color:#EEE;
@@ -205,6 +224,10 @@ a.expand {
 /* ============================================================
   EFFECT 5 - ICON BORDER ANIMATE
 ============================================================ */
+
+#effect-5{
+	width:100%;padding:0px;
+}
 #effect-5 .overlay {
   top: 0;
   bottom: 0;
