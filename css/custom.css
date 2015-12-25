@@ -46,7 +46,6 @@ border-top:1px dotted #999999;
 }
 .center{
 	min-height:500px;
-	background-color:#096;	
 }
 .right{
 	min-height:1000px;
@@ -79,7 +78,7 @@ ul li a:hover{
 .box_left{
 	margin-top:10px;	
 	border-bottom:1px dotted #999;
-	padding:17px 0px;
+	padding:17px 2px;
 }
 .title_left{
 	font-size:18px;
@@ -243,6 +242,7 @@ a.expand {
 
 
 /*End style for image:hover left*/
+<<<<<<< HEAD
 
 
 /*start of menu1 */
@@ -272,3 +272,29 @@ a.expand {
 }
 
 /*end of footer*/
+=======
+.left_image{
+margin:0px;
+padding:0px;	
+}
+.box_center{
+	margin-top:0px;	
+	border-bottom:1px dotted #999;
+	padding:10px 2px;
+}
+.center_image{
+	padding:0px;
+	margin-right:10px;	
+}
+.center_image:hover{
+	border-radius:5px;
+  
+
+    border:inset 4px #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+
+}
+>>>>>>> 202cde94fad024355950796b4eae17115af0fab1
