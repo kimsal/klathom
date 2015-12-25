@@ -43,7 +43,6 @@ border-top:1px dotted #999999;
 }
 .center{
 	min-height:500px;
-	background-color:#096;	
 }
 .right{
 	min-height:1000px;
@@ -242,4 +241,24 @@ a.expand {
 .left_image{
 margin:0px;
 padding:0px;	
+}
+.box_center{
+	margin-top:0px;	
+	border-bottom:1px dotted #999;
+	padding:10px 2px;
+}
+.center_image{
+	padding:0px;
+	margin-right:10px;	
+}
+.center_image:hover{
+	border-radius:5px;
+  
+
+    border:inset 4px #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+
 }
