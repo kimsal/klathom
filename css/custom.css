@@ -68,11 +68,15 @@ border-top:1px dotted #999999;
 	margin-bottom:5px;
 }
 .latest_review_box{
-	padding-left:0px;
-	margin-left:0px;
+	padding:0px;
+	margin:0px;
 	border-bottom:1px dotted #CCC;
 	padding-bottom:15px;
 	padding-top:15px;
+}
+.latest_review_box_title{
+	padding:0px;
+	margin-right:0px;
 }
 .latest_review_box a{
 	color: #232323;
