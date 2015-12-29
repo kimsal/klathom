@@ -468,6 +468,28 @@ padding:0px;
 padding:0px;
 margin:0px;	
 }
+/*css for single page*/
+.single_title{
+	font-size:20px;
+	color:#006;
+	margin:15px 10px;
+	padding-top:10px;	
+	line-height:30px;
+}
+.single_social{
+		margin:10px;
+		border-bottom:1px dotted #666666;
+		border-top:1px dotted #666666;
+		min-height:40px;
+}
+.single_content{
+	padding:15px 10px;
+	line-height:30px;	
+}
+/*end of css for single page*/
+			
+			
+			
 			
 
 
