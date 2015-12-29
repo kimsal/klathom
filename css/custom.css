@@ -487,6 +487,11 @@ margin:0px;
 	line-height:30px;	
 }
 /*end of css for single page*/
+/*CSS for Category page*/
+.break-line{
+	line-height:10px;border-bottom:1px dotted #666666;	
+}
+/*End CSS for category page*/
 			
 			
 			
