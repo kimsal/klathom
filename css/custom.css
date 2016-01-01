@@ -61,12 +61,6 @@ border-top:1px dotted #999999;
 .right{
 	min-height:1000px;
 }
-.latest-review{
-	min-height:29px;
-	background-color:#CCC;	
-	margin-top:5px;
-	margin-bottom:5px;
-}
 .latest_review_box{
 	padding:0px;
 	margin:0px;
@@ -117,6 +111,37 @@ border-top:1px dotted #999999;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+}
+.panel_header {
+  background: #ececec none repeat scroll 0 0;
+  display: block;
+  height: 29px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.panel_header b {
+  background: #264c84 none repeat scroll 0 0;
+  color: #fff;
+  display: block;
+  float: left;
+  font-size: 11px;
+  padding: 5px 10px;
+  height: 29px;
+  text-transform: uppercase;
+  z-index: 0;
+  margin-left: -15px;
+}
+.panel_header b:after {
+  background: inherit;
+  content: "";
+  display: block;
+  height: 29px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  transform: rotate(15deg);
+  width: 40px;
+  z-index: -1;
 }
 /*breaking new */
 div div .mymarq{
