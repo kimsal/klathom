@@ -61,9 +61,9 @@ include('config/config.php');
                 
             </ul>
             <div class="col-sm-3 col-md-3 pull-right">
-                <form class="navbar-form" role="search">
+                <form class="navbar-form" role="search" method="get">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="ស្វែងរក . . ." name="q">
+                        <input type="text" class="form-control" placeholder="ស្វែងរក . . ." name="s">
                         <div class="input-group-btn">
                             <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                         </div>

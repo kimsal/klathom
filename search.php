@@ -4,6 +4,7 @@ if(isset($_GET['pagin']))
 	$pagin=$_GET['pagin'];
 else
 	$pagin=1;
+$search=$_GET['s'];
 ?>
 <div class="container">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -37,10 +38,11 @@ else
         </div>
             
     	<?php
-    	$catid=$_GET['cat'];
-    	$help=0;
-         $rs=mysqli_query($con,"Select des_id,title,image,description,post_date from tbdescription where catid=".$catid.' limit '.(($pagin-1)*12).',12');
+    	   $help=0;
+         $check=0;
+         $rs=mysqli_query($con,"Select des_id,title,image,description,post_date from tbdescription WHERE MATCH (title) AGAINST ('".$search."*' IN BOOLEAN MODE) limit ".(($pagin-1)*12).",12");
           while($row=mysqli_fetch_array($rs)){
+            $check=1;
           	if($help==3){
           		?>
           		 <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 break-line">
@@ -78,6 +80,29 @@ else
             <!--End center box-->
           	<?php
     	  }
+        if($check==0){
+          ?> 
+         <p style="color:red;font-weight:bold;font-size:24px;">No result for " <?php echo $search; ?> ". </p>
+        <br/>
+        <p style="color:blue;font-size:20px;"><b>Suggestions:</b></p>
+        <br/>
+        <ul style="margin-left:10px;color:black;font-size:20px;">
+          <li>Please check your spelling properly .</li>
+          <li>Please try for other keywords.</li>
+          <li>Make your keywords to be more shorter</li>
+          <li>Make sure that it's keyword for downloading file like book,software,tempate...</li>
+        </ul>
+        <center>
+            <img src="img/sorry.jpg" title="Sorry this page is not avaliable." class="img-responsive"/>
+        </center>s
+          <?php
+        }
+        else{
+          ?>
+          <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 break-line">
+          </div>
+          <?php
+        }
       ?>
             
             
@@ -85,15 +110,13 @@ else
         
         
         
-        <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 break-line">
-        </div>
-
+      
     <!--end of right side-->
     <!--pagination-->
     <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
     <?php
       $last_pagin=1;
-       $rs=mysqli_query($con,"SELECT count(*) FROM tbdescription where catid=".$catid);
+       $rs=mysqli_query($con,"SELECT count(*) FROM tbdescription WHERE MATCH (title) AGAINST ('".$search."*' IN BOOLEAN MODE)");
       while($row=mysqli_fetch_array($rs)){
         $last_pagin=$row[0];
         $last_pagin=ceil($last_pagin/12);
@@ -114,36 +137,36 @@ else
                     }
                     else{
                     ?>
-                    <li><a href="<?php echo $domain; ?>?pagin=<?php echo $i; ?>&cat=<?php echo $catid; ?>"><?php echo $i; ?></a></li>
+                    <li><a href="<?php echo $domain; ?>?pagin=<?php echo $i; ?>&s=<?php echo $search; ?>"><?php echo $i; ?></a></li>
                     <?php
                     }
                   }
                 }
                 else if($pagin>=($last_pagin-2)){
                   ?>
-                  <li><a href="<?php echo $domain; ?>?pagin=1&cat=<?php echo $catid; ?>">1</a></li>
-                  <li><a href="<?php echo $domain; ?>?pagin=2&cat=<?php echo $catid; ?>">2</a></li>
-                  <li><a href="<?php echo $domain; ?>?pagin=3&cat=<?php echo $catid; ?>">3</a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=1&s=<?php echo $search; ?>">1</a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=2&s=<?php echo $search; ?>">2</a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=3&s=<?php echo $search; ?>">3</a></li>
                   <li><a href="#">...</a></li>
-                  <li <?php if($pagin==($last_pagin-2)){echo 'class="active"';} ?>><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin-2; ?>&cat=<?php echo $catid; ?>"><?php echo $last_pagin-2; ?></a></li>
-                 <li <?php if($pagin==($last_pagin-1)){echo 'class="active"';} ?>><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin-1; ?>&cat=<?php echo $catid; ?>"><?php echo $last_pagin-1; ?></a></li>
-                 <li <?php if($pagin==($last_pagin)){echo 'class="active"';} ?>><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin; ?>&cat=<?php echo $catid; ?>"><?php echo $last_pagin; ?></a></li>
+                  <li <?php if($pagin==($last_pagin-2)){echo 'class="active"';} ?>><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin-2; ?>&s=<?php echo $search; ?>"><?php echo $last_pagin-2; ?></a></li>
+                 <li <?php if($pagin==($last_pagin-1)){echo 'class="active"';} ?>><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin-1; ?>&s=<?php echo $search; ?>"><?php echo $last_pagin-1; ?></a></li>
+                 <li <?php if($pagin==($last_pagin)){echo 'class="active"';} ?>><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin; ?>&s=<?php echo $search; ?>"><?php echo $last_pagin; ?></a></li>
                   
                   <?php
                 }
                 else if($pagin>8){
                   ?>
-                  <li><a href="<?php echo $domain; ?>?pagin=1&cat=<?php echo $catid; ?>">1</a></li>
-                  <li><a href="<?php echo $domain; ?>?pagin=2&cat=<?php echo $catid; ?>">2</a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=1&s=<?php echo $search; ?>">1</a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=2&s=<?php echo $search; ?>">2</a></li>
 
                   <li><a href="#">...</a></li>
-                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $pagin-1; ?>&cat=<?php echo $catid; ?>"><?php echo $pagin-1; ?></a></li>
-                  <li class="active"><a href="<?php echo $domain; ?>?pagin=<?php echo $pagin; ?>&cat=<?php echo $catid; ?>"><?php echo $pagin; ?></a></li>
-                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $pagin+1; ?>&cat=<?php echo $catid; ?>"><?php echo $pagin+1; ?></a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $pagin-1; ?>&s=<?php echo $search; ?>"><?php echo $pagin-1; ?></a></li>
+                  <li class="active"><a href="<?php echo $domain; ?>?pagin=<?php echo $pagin; ?>&s=<?php echo $search; ?>"><?php echo $pagin; ?></a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $pagin+1; ?>&s=<?php echo $search; ?>"><?php echo $pagin+1; ?></a></li>
                   <li><a href="#">...</a></li>
 
-                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin-1; ?>&cat=<?php echo $catid; ?>"><?php echo $last_pagin-1; ?></a></li>
-                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin; ?>&cat=<?php echo $catid; ?>"><?php echo $last_pagin; ?></a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin-1; ?>&s=<?php echo $search; ?>"><?php echo $last_pagin-1; ?></a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin; ?>&s=<?php echo $search; ?>"><?php echo $last_pagin; ?></a></li>
                   <?php
                 }
                 else{
@@ -155,15 +178,15 @@ else
                     }
                     else{
                       ?>
-                      <li><a href="<?php echo $domain; ?>?pagin=<?php echo $i; ?>&cat=<?php echo $catid; ?>"><?php echo $i; ?></a></li>
+                      <li><a href="<?php echo $domain; ?>?pagin=<?php echo $i; ?>&s=<?php echo $search; ?>"><?php echo $i; ?></a></li>
                       <?php
                     }
                   }
                   ?>
                   <li><a href="#">...</a></li>
-                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin-2; ?>&cat=<?php echo $catid; ?>"><?php echo $last_pagin-2; ?></a></li>
-                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin-1; ?>&cat=<?php echo $catid; ?>"><?php echo $last_pagin-1 ?></a></li>
-                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin; ?>&cat=<?php echo $catid; ?>"><?php echo $last_pagin; ?></a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin-2; ?>&s=<?php echo $search; ?>"><?php echo $last_pagin-2; ?></a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin-1; ?>&s=<?php echo $search; ?>"><?php echo $last_pagin-1 ?></a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin; ?>&s=<?php echo $search; ?>"><?php echo $last_pagin; ?></a></li>
                 <?php 
                 }
                 ?>
