@@ -1,106 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name"description" content=""/>
-<meta name"keywords" content=""/>
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/custom.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- jQuery library -->
-<script src="js/jquery.min.js"></script>
-<script src="js/custome.js"></script>
-<script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-<script src="js/modernizr.js"></script>
- <script type="text/javascript" src="js/jssor.js"></script>
-    <script type="text/javascript" src="js/jssor.slider.js"></script>
-<link rel="shortcut icon" type="image/png" href="img/logo.png" />
-<title>ខ្លាធំ​</title>
-</head>
-<body>
-<!--
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 hidden-xs" id="banner_top">
-	<center>
-    	<img src="img/logo.png" class="img-responsive" style="height:90px;margin-top:10px;"/>
-    </center> 
+<?php
+include('header.php');
+?>
 
-</div>
-<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" id="banner_top">
-	<img src="img/banner-468x60.jpg" class="img-responsive" style="height:90px;margin-top:10px;"/>
-</div>
--->
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="menu_top1">
-	<!--sart menu 1-->
-    <nav class="navbar-default" role="navigation" style="background-color: #F6F6F6">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-        </div>
-        <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav myover" >
-                <li><a  href="#">Home</a></li>
-                <li><a href="#">Education</a></li>
-                <li><a href="#">Technology</a></li>
-                <li><a href="#">Health</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Education</a></li>
-                <li><a href="#">Technology</a></li>
-                <li><a href="#">About Us</a></li>
-            </ul>
-            <div class="col-sm-3 col-md-3 pull-right">
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="ស្វែងរក . . ." name="q">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </nav>
-    <!--end of menu 1-->
-</div>
-<div style="clear: both;float: none;"></div>
 <div class="container">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="row" style="margin:0px;padding:0px; margin-top: 1px;">
-                <div class=" col-sm-2 col-xs-12" style="padding:0px;background-color:#264C84; ">
-                    <h4 style=" text-align:center;color: #ffffff">Breaking News</h4>
-                </div>
-                <div class=" col-sm-9 col-xs-12 mymarq " >
-                    <marquee behavior="scroll" scrollamount="3" direction="left">
-                        <ul style="margin-top: 7px; ">
-                            <li style="display: inline; margin-left: 2px;">
-                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
-                            </li>
-                            <li style="display: inline; margin-left: 2px;">
-                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
-                            </li>
-                            <li style="display: inline; margin-left: 2px;">
-                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
-                            </li>
-                            <li style="display: inline; margin-left: 2px;">
-                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
-                            </li>
-                            <li style="display: inline; margin-left: 2px;">
-                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
-                            </li>
-
-                        </ul>
-                    </marquee>
-
-                </div>
-                <div class="col-xs-12 col-sm-1 col-lg-1 col-md-1 hidden-xs"  style="padding:0px;background-color: #264C84">
-                    <h4 style=" text-align:center;color: #ffffff">ព័ត៏មានថ្មី</h4>
-                </div>
+        <div class="row" style="margin:0px;padding:0px; margin-top: 1px;">
+            <div class=" col-sm-2 col-xs-12" style="padding:0px;background-color:#264C84; ">
+                <h4 style=" text-align:center;color: #ffffff">Breaking News</h4>
             </div>
+            <div class=" col-sm-9 col-xs-12 mymarq " >
+                <marquee behavior="scroll" scrollamount="3" direction="left">
+                    <ul style="margin-top: 7px; ">
+
+                    	<?php
+		                 $rs=mysqli_query($con,"Select des_id,title from tbdescription order by des_id limit 10");
+		                  while($row=mysqli_fetch_array($rs)){
+		                    ?>
+			                  <li style="display: inline; margin-left: 2px;">
+                                <a href="<?php echo $domain; ?>?single=<?php echo $row[0]; ?>">
+                                	<?php echo $row[1]; ?>
+                                </a>
+                            </li>
+		                    <?php
+		                  }
+		                ?>
+                    </ul>
+                </marquee>
+
+            </div>
+            <div class="col-xs-12 col-sm-1 col-lg-1 col-md-1 hidden-xs"  style="padding:0px;background-color: #264C84">
+                <h4 style=" text-align:center;color: #ffffff">ព័ត៏មានថ្មី</h4>
+            </div>
+        </div>
             
    
    
@@ -117,18 +48,29 @@
         height: 300px;">
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 650px; height: 300px;margin-top:4px;
             overflow: hidden;">
+            <?php
+             $rs=mysqli_query($con,"Select des_id,title,image from tbdescription");
+              while($row=mysqli_fetch_array($rs)){
+              	?>
+            	  <div>
+            	  	<a href="<?php echo $domain ?>?single=<?php echo $row[0]; ?>" style="color:#FFF;">
+	                <img u=image src="img/<?php echo $row[2]; ?>" />
+	         	   </a>
+	                <div u="thumb"></div>
+	                <div u="caption" t="FADE" style="position: absolute; top: 215px; left: 0px;right:0px; min-width: 150px; min-height: 100px; color: #ffffff; font-size: 26px; text-align: left;padding:3px 10px;;background-image:url(img/2.png);">
+	                <a href="<?php echo $domain ?>?single=<?php echo $row[0]; ?>" style="color:#FFF;">
+	                	<?php echo $row[1]; ?>
+	                </a>		
+	                </div>
+	            </div>
+	            
+              	<?php
+              }
+            ?>
+
            
-           
-           <div>
-                <img u=image src="img/03.jpg" />
-                <div u="thumb"></div>
-                <div u="caption" t="FADE" style="position: absolute; top: 215px; left: 0px;right:0px; min-width: 150px; min-height: 80px; color: #ffffff; font-size: 26px; text-align: left;padding:3px 10px;;background-image:url(img/2.png);">This is the title of the post. This is the title of the post</div>
-            </div>
-            <div>
-                <img u=image src="img/04.jpg" />
-                <div u="thumb"></div>
-               <div u="caption" t="FADE" style="position: absolute; top: 215px; left: 0px;right:0px; min-width: 150px; min-height: 80px; color: #ffffff; font-size: 26px;  text-align: left;padding:3px 10px;;background-image:url(img/2.png);">This is the title of the post. This is the title of the post This is the title of the post.</div>
-            </div>
+         
+            
         </div>
 
         <!--#region Thumbnail Navigator Skin Begin -->
@@ -874,87 +816,9 @@
       	</center>
       </div>
     <!--End pagin-->
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 footer">
-            <div class="row" style="margin:0px;padding:0px; margin-top: 1px;">
-                <div class=" col-sm-2 col-xs-12" style="padding:0px;background-color:#264C84; ">
-                    <h4 style="text-align:center;color:#ffffff;padding:0px;">Breaking News</h4>
-                </div>
-                <div class=" col-sm-9 col-xs-12 mymarq" >
-                    <marquee behavior="scroll" scrollamount="3" direction="left">
-                        <ul style="margin-top: 7px; ">
-                            <li style="display: inline; margin-left: 2px;">
-                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
-                            </li>
-                            <li style="display: inline; margin-left: 2px;">
-                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
-                            </li>
-                            <li style="display: inline; margin-left: 2px;">
-                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
-                            </li>
-                            <li style="display: inline; margin-left: 2px;">
-                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
-                            </li>
-                            <li style="display: inline; margin-left: 2px;">
-                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
-                            </li>
 
-                        </ul>
-                    </marquee>
 
-                </div>
-                <div class="col-xs-12 col-sm-1 col-lg-1 col-md-1 hidden-xs"  style="padding:0px;background-color: #264C84">
-                    <h4 style=" text-align:center;color: #ffffff">ព័ត៏មានថ្មី</h4>
-                </div>
-            </div>
-        <div class="col-xs-12 col-md-12 col-sm-12 myfoot">
-            <!--footer-->
-           <div class="col-sm-4 col-xs-12  col-md-4">
-               <label>Statement</label>
-                <img class="img-responsive fbcon1" src="img/fbicon.png" />
-               <img class="img-responsive fbcon1" src="img/linkedin.png" />
-               <img class="img-responsive fbcon1" src="img/Twitterbird.png" />
-           </div>
-            <div class="col-sm-4 col-xs-12 col-md-4">
 
-                <ul>
-                    <li class="listfooter">
-                        <label class="la1">Categories</label>
-                    </li>
-                    <li class="listfooter">
-                        <a id="leg1" href="#"> Hello Cambodia Hot News!</a>
-                    </li>
-                    <li class="listfooter">
-                        <a id="leg1" href="#"> Hello Cambodia Hot News!</a>
-                    </li>
-                    <li class="listfooter">
-                        <a id="leg1" href="#"> Hello Cambodia Hot News!</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm-4 col-xs-12 col-md-4">
-                <ul>
-                    <li class="listfooter">
-                        <label class="la1">Page</label>
-                    </li>
-                    <li class="listfooter">
-                        <a id="leg1" href="#">About Us</a>
-                    </li>
-                    <li class="listfooter">
-                        <a id="leg1" href="#">Contact Us</a>
-                    </li>
-                    <li class="listfooter">
-                        <a id="leg1" href="#"> Khlathom.net</a>
-                        <a id="leg1" href="#"> Hello Cambodia Hot News 2!</a>
-                    </li>
-                </ul>
-            </div>
-            <!--end of footer-->
-        </div>
-    </div>
-</div>
-</div>
-<!--close containner-->
-</div>
-</body>
-</html>
-
+<?php
+include('footer.php');
+?>
