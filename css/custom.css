@@ -115,7 +115,7 @@ border-top:1px dotted #999999;
 .panel_header {
   background: #ececec none repeat scroll 0 0;
   display: block;
-  height: 29px;
+  height: 35px;
   margin-bottom: 15px;
   overflow: hidden;
 }
@@ -124,12 +124,13 @@ border-top:1px dotted #999999;
   color: #fff;
   display: block;
   float: left;
-  font-size: 11px;
+  font-size: 13px;
   padding: 5px 10px;
-  height: 29px;
+  height: 35px;
   text-transform: uppercase;
   z-index: 0;
   margin-left: -15px;
+  line-height: 25px;
 }
 .panel_header b:after {
   background: inherit;
