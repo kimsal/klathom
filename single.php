@@ -62,12 +62,11 @@ $single=$_GET['single'];
 
 
             <!--related post-->
-         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="row">
-            
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="row" style="margin-top:10px;">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 panel_header">
                     <b> 
-                        <span>Latest review</span>
+                        <span>ព័ត៍មានទាក់ទង</span>
                     </b>
                 </div>
                 <!--Box left small latest post-->
@@ -95,7 +94,7 @@ $single=$_GET['single'];
                     </div>
                 </div>
             </div>
-        </div>     
+        </div>      
         
     </div>
 
