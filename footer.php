@@ -19,7 +19,7 @@
                         ?>
                        <li class="listfooter">
                             <a href="<?php echo $domain; ?>?cat=<?php echo $row[0]; ?>">
-                                <label id="leg1"><?php echo $row[1]; ?></label>
+                                <label id="leg1" style="cursor:pointer;"><?php echo $row[1]; ?></label>
                             </a>
                         </li>
                         <?php
@@ -35,7 +35,7 @@
                     ?>
                    <li class="listfooter">
                         <a href="<?php echo $domain; ?>?page=<?php echo $row[0]; ?>">
-                            <label id="leg1"><?php echo $row[1]; ?></label>
+                            <label id="leg1" style="cursor:pointer;"><?php echo $row[1]; ?></label>
                         </a>
                     </li>
                     <?php

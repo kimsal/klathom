@@ -14,7 +14,7 @@ else if(isset($_GET['pagin'])){  //condition for pagin in category.php & pagin.p
 else if(isset($_GET['cat'])){
 	include('categories.php');	
 }
-else if(isset($_GET['pag'])){
+else if(isset($_GET['page'])){
 	include('page.php');
 }
 else if(isset($_GET['single'])){

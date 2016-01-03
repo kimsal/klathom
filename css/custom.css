@@ -52,14 +52,14 @@ border-top:1px dotted #999999;
 	margin-top:4px;
 }
 .left{
-	min-height:500px;
+	min-height:300px;
 	padding:0px 0px;
 }
 .center{
-	min-height:500px;
+	min-height:300px;
 }
 .right{
-	min-height:1000px;
+	min-height:300px;
 }
 .latest_review_box{
 	padding:0px;
@@ -383,6 +383,7 @@ a.expand {
     color:#FFF;
     font-size: 15px;
     padding-top: 15px;
+    cursor:pointer;
 }
 #leg1:hover{
     text-decoration: underline;
