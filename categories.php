@@ -12,7 +12,7 @@ else
                 <h4 style=" text-align:center;color: #ffffff">Breaking News</h4>
             </div>
             <div class=" col-sm-9 col-xs-12 mymarq " >
-                <marquee behavior="scroll" scrollamount="3" direction="left">
+                <marquee behavior="scroll" scrollamount="3" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
                     <ul style="margin-top: 7px; ">
 
                     	<?php
@@ -23,7 +23,7 @@ else
                                 <a href="<?php echo $domain; ?>?single=<?php echo $row[0]; ?>">
                                 	<?php echo $row[1]; ?>
                                 </a>
-                            </li>
+                            </li> - 
 		                    <?php
 		                  }
 		                ?>

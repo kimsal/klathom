@@ -9,7 +9,7 @@ $single=$_GET['single'];
                 <h4 style=" text-align:center;color: #ffffff">Breaking News</h4>
             </div>
             <div class=" col-sm-9 col-xs-12 mymarq " >
-                <marquee behavior="scroll" scrollamount="3" direction="left">
+                <marquee behavior="scroll" scrollamount="3" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
                     <ul style="margin-top: 7px; ">
 
                     	<?php
@@ -20,7 +20,7 @@ $single=$_GET['single'];
                                 <a href="<?php echo $domain; ?>?single=<?php echo $row[0]; ?>">
                                 	<?php echo $row[1]; ?>
                                 </a>
-                            </li>
+                            </li> - 
 		                    <?php
 		                  }
 		                ?>
@@ -51,7 +51,7 @@ $single=$_GET['single'];
             <?php echo $row[2]; ?>
             <br/><br/>
             <img src="img/<?php echo $row[3]; ?>" title="<?php echo $row[1]; ?>" class="img-responsive"/>
-            <br/><br/><br/>
+            <br/><br/>
             Posted date : <?php
                  $date=date_create($row[5]);
                     echo date_format($date,"y/m/d H:i:s"); ?>
@@ -69,30 +69,30 @@ $single=$_GET['single'];
                         <span>ព័ត៍មានទាក់ទង</span>
                     </b>
                 </div>
-                <!--Box left small latest post-->
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 latest_review_box">
-                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 img_review">
-                        <a href=""><img class="img_latest" src="img/latest-review-101.jpg"></a>
+                <?php
+                $rs=mysqli_query($con,"select des_id,title,description,image,post_date from tbdescription where catid=".$catid." order by des_id DESC limit 6");
+                while($row=mysqli_fetch_array($rs)){
+                    ?>
+                     <!--Box left small latest post-->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 latest_review_box">
+                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 img_review">
+                            <a href="<?php echo $domain; ?>/single=<?php echo $row[0]; ?>"><img class="img_latest img-responsive" src="img/<?php echo $row[3]; ?>">
+                        </div>
+                        <div class="col-xs-6 col-sm-8 col-md-8 com-lg-8 latest_review_box_title">
+                           <?php echo $row[1]; ?>
+                           <!-- <p class="desc_review hidden-xs">An d they sup rise us ag ain</p> -->
+                            <div class="hidden-xs" style="color:#999;font-size:12px;font-weight:200;">Posted on 
+                                <?php
+                                 $date=date_create($row[4]);
+                                    echo date_format($date,"y/m/d H:i:s");
+                                 ?>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-xs-6 col-sm-8 col-md-8 com-lg-8 latest_review_box_title">
-                        <a href="#">they are title is here not too short</a>
-                        <p class="desc_review hidden-xs">An d they sup rise us ag ain</p>
-                        <span class="hidden-xs">Posted on 12-12-2015</span>
-                    </div>
-                </div>
-                
-                <!--Box left small latest post-->
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 latest_review_box">
-                
-                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 img_review">
-                        <a href=""><img class="img_latest" src="img/latest-review-101.jpg"></a>
-                    </div>
-                    <div class="col-xs-6 col-sm-8 col-md-8 com-lg-8 latest_review_box_title">
-                        <a href="#">they are title is here not too short</a>
-                        <p class="desc_review hidden-xs">An d they sup rise us ag ain</p>
-                        <span class="hidden-xs">Posted on 12-12-2015</span>
-                    </div>
-                </div>
+                    </a>
+                    <?php
+                }
+                ?>    
             </div>
         </div>      
         
@@ -102,139 +102,33 @@ $single=$_GET['single'];
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 right">
         <br/>
         <b class="btn btn-primary col-sm-12" style="cursor:default;">
-            General Knowlege
+            ព័ត៍មានថ្មីៗ
         </b>
-        
-        <!--box right-->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-             <a href="#">
-            <span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
+         <?php
+        $rs=mysqli_query($con,"select des_id,title,description,image,post_date from tbdescription order by des_id DESC limit 6");
+        while($row=mysqli_fetch_array($rs)){
+            ?>
+            <!--box right-->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
+                 <a href=" <?php echo $domain; ?>?single=<?php echo $row[0]; ?>">
+                <span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
                 
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-                Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-            </a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-             <a href="#">
-            <span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
+                <img src="img/<?php echo $row[3]; ?>" class="img-responsive"/>
+                    
+                     <div class="overlay">
+                       
+                    </div>
+                </span>
                 
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-                Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-            </a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-             <a href="#">
-            <span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-                Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-            </a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-             <a href="#">
-            <span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-                Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-            </a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-             <a href="#">
-            <span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-                Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-            </a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-             <a href="#">
-            <span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-                Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-            </a>
-        </div>
-        <!--End box right-->
-         <!--box right-->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-             <a href="#">
-            <span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-                Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-            </a>
-        </div>
-        <!--End box right-->
-        
-        
-        
-        
+                <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
+                    <?php echo $row[1]; ?>
+                </span>
+                </a>
+            </div>
+            <!--End box right-->
+            <?php
+        }
+        ?>
     </div>
     <!--end of right side-->
     
@@ -244,24 +138,21 @@ $single=$_GET['single'];
                     <h4 style="text-align:center;color:#ffffff;padding:0px;">Breaking News</h4>
                 </div>
                 <div class=" col-sm-9 col-xs-12 mymarq" >
-                    <marquee behavior="scroll" scrollamount="3" direction="left">
+                    <marquee behavior="scroll" scrollamount="3" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
                         <ul style="margin-top: 7px; ">
-                            <li style="display: inline; margin-left: 2px;">
-                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
-                            </li>
-                            <li style="display: inline; margin-left: 2px;">
-                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
-                            </li>
-                            <li style="display: inline; margin-left: 2px;">
-                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
-                            </li>
-                            <li style="display: inline; margin-left: 2px;">
-                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
-                            </li>
-                            <li style="display: inline; margin-left: 2px;">
-                                <a href="#">START Lorem ipsum dolor sit ametSTART Lorem ipsum dolor sit ame</a>
-                            </li>
-
+                          
+                        <?php
+                         $rs=mysqli_query($con,"Select des_id,title from tbdescription order by des_id limit 10");
+                          while($row=mysqli_fetch_array($rs)){
+                            ?>
+                              <li style="display: inline; margin-left: 2px;">
+                                <a href="<?php echo $domain; ?>?single=<?php echo $row[0]; ?>">
+                                    <?php echo $row[1]; ?>
+                                </a>
+                            </li> - 
+                            <?php
+                          }
+                        ?>
                         </ul>
                     </marquee>
 

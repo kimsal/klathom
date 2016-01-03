@@ -9,18 +9,18 @@ include('header.php');
                 <h4 style=" text-align:center;color: #ffffff">Breaking News</h4>
             </div>
             <div class=" col-sm-9 col-xs-12 mymarq " >
-                <marquee behavior="scroll" scrollamount="3" direction="left">
+                <marquee behavior="scroll" scrollamount="3" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
                     <ul style="margin-top: 7px; ">
 
                     	<?php
-		                 $rs=mysqli_query($con,"Select des_id,title from tbdescription order by des_id limit 10");
+		                 $rs=mysqli_query($con,"Select des_id,title from tbdescription order by des_id limit 2");
 		                  while($row=mysqli_fetch_array($rs)){
 		                    ?>
 			                  <li style="display: inline; margin-left: 2px;">
                                 <a href="<?php echo $domain; ?>?single=<?php echo $row[0]; ?>">
                                 	<?php echo $row[1]; ?>
                                 </a>
-                            </li>
+                            </li> - 
 		                    <?php
 		                  }
 		                ?>
@@ -57,7 +57,7 @@ include('header.php');
 	                <img u=image src="img/<?php echo $row[2]; ?>" />
 	         	   </a>
 	                <div u="thumb"></div>
-	                <div u="caption" t="FADE" style="position: absolute; top: 215px; left: 0px;right:0px; min-width: 150px; min-height: 100px; color: #ffffff; font-size: 26px; text-align: left;padding:3px 10px;;background-image:url(img/2.png);">
+	                <div u="caption" t="FADE" style="position: absolute; top: 215px; left: 0px;right:0px; min-width: 150px; min-height: 100px; color: #ffffff; font-size: 20px; text-align: left;padding:3px 10px;;background-image:url(img/2.png);">
 	                <a href="<?php echo $domain ?>?single=<?php echo $row[0]; ?>" style="color:#FFF;">
 	                	<?php echo $row[1]; ?>
 	                </a>		
