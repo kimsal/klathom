@@ -18,7 +18,7 @@
                       while($row=mysqli_fetch_array($rs)){
                         ?>
                        <li class="listfooter">
-                            <a href="">
+                            <a href="<?php echo $domain; ?>?cat=<?php echo $row[0]; ?>">
                                 <label id="leg1"><?php echo $row[1]; ?></label>
                             </a>
                         </li>
@@ -34,7 +34,7 @@
                   while($row=mysqli_fetch_array($rs)){
                     ?>
                    <li class="listfooter">
-                        <a href="">
+                        <a href="<?php echo $domain; ?>?page=<?php echo $row[0]; ?>">
                             <label id="leg1"><?php echo $row[1]; ?></label>
                         </a>
                     </li>
