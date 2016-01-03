@@ -111,305 +111,85 @@ include('header.php');
         
         
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 left">
-        	<div class="box_left" title="Sumo aliquip pri cu. Facilisi temporibus">
-            	<a href="#">
-                  <div id="effect-5" class="effects clearfix">
-                      <div class="img">
-                            <img src="img/image-7.jpg" alt="" class="img-responsive image_left"/>
-                            <div class="overlay">
-                                <a href="#" class="expand">+</a>
-                                <a class="close-overlay hidden">-</a>
-                            </div>
-                      </div>
-                  </div>
+             <?php
+                 $rs=mysqli_query($con,"Select des_id,title,description,image,post_date from tbdescription order by des_id limit 4");
+                  while($row=mysqli_fetch_array($rs)){
+                    ?>
+                    <div class="box_left" title="Sumo aliquip pri cu. Facilisi temporibus">
                     
-                    <div class="title_left">
-                        
-                         Sumo aliquip pri cu. Facilisi temporibus 
-    
-                    </div>
-                    <div class="post_date_left">
-                        11-Dec-2015 4:29PM
-                    </div>
-                    <div class="description_left">
-                    Sumo aliquip pri cu. Facilisi temporibus pri et. In ubique aliquid pri, ipsum corpora id sea. Has dico invenire in. Everti maiorum voluptatum his in, omnes eligendi vim an, erroribus disputationi concludaturque his cu. Quodsi everti ancillae vim cu, qui ne lorem persius petentium...
-                    </div>
-                </a>
-                <div class="read_full">
-                <center>
-                	<a href="#">
-                    	<span class="glyphicon glyphicon-search" style="margin-right:10px;"></span>
-                    	Read Full Article
-                     </a>
-               	</center>
-                </div>
-            </div><!--End box-->
-            
-            <div class="box_left" title="Sumo aliquip pri cu. Facilisi temporibus">
-            	<a href="#">
-                  <div id="effect-5" class="effects clearfix left_image">
-                      <div class="img">
-                            <img src="img/image-1.jpg" alt="" class="img-responsive image_left"/>
-                            <div class="overlay">
-                                <a href="#" class="expand">+</a>
-                                <a class="close-overlay hidden">-</a>
-                            </div>
+                      <div id="effect-5" class="effects clearfix">
+                          <div class="img">
+                                <img src="img/<?php echo $row[3]; ?>" alt="" class="img-responsive image_left"/>
+                                <div class="overlay">
+                                    <a href="#" class="expand">+</a>
+                                    <a class="close-overlay hidden">-</a>
+                                </div>
+                          </div>
                       </div>
-                  </div>
-                    
-                    <div class="title_left">
-                        
-                         Sumo aliquip pri cu. Facilisi temporibus 
-    
+                      <a href="<?php echo $domain; ?>?single=<?php echo $row[0]; ?>">
+                        <div class="title_left">
+                             <?php echo $row[1]; ?>
+                        </div>
+                        <div class="post_date_left">
+                           <?php
+                             $date=date_create($row[4]);
+                             echo date_format($date,"y/m/d H:i:s"); 
+                             ?>
+                        </div>
+                        <div class="description_left">
+                        <?php
+                            echo substr($row[2], 0, 370);
+                        ?>
+                        </div>
+                    </a>
+                    <div class="read_full">
+                    <center>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-search" style="margin-right:10px;"></span>
+                            Read Full Article
+                         </a>
+                    </center>
                     </div>
-                    <div class="post_date_left">
-                        11-Dec-2015 4:29PM
-                    </div>
-                    <div class="description_left">
-                    Sumo aliquip pri cu. Facilisi temporibus pri et. In ubique aliquid pri, ipsum corpora id sea. Has dico invenire in. Everti maiorum voluptatum his in, omnes eligendi vim an, erroribus disputationi concludaturque his cu. Quodsi everti ancillae vim cu, qui ne lorem persius petentium...
-                    </div>
-                </a>
-                <div class="read_full">
-                <center>
-                	<a href="#">
-                    	<span class="glyphicon glyphicon-search" style="margin-right:10px;"></span>
-                    	Read Full Article
-                     </a>
-               	</center>
-                </div>
-            </div><!--End box-->
-            
-            <div class="box_left" title="Sumo aliquip pri cu. Facilisi temporibus">
-            	<a href="#">
-                  <div id="effect-5" class="effects clearfix">
-                      <div class="img">
-                            <img src="img/image-7.jpg" alt="" class="img-responsive image_left"/>
-                            <div class="overlay">
-                                <a href="#" class="expand">+</a>
-                                <a class="close-overlay hidden">-</a>
-                            </div>
-                      </div>
-                  </div>
-                    
-                    <div class="title_left">
-                        
-                         Sumo aliquip pri cu. Facilisi temporibus 
-    
-                    </div>
-                    <div class="post_date_left">
-                        11-Dec-2015 4:29PM
-                    </div>
-                    <div class="description_left">
-                    Sumo aliquip pri cu. Facilisi temporibus pri et. In ubique aliquid pri, ipsum corpora id sea. Has dico invenire in. Everti maiorum voluptatum his in, omnes eligendi vim an, erroribus disputationi concludaturque his cu. Quodsi everti ancillae vim cu, qui ne lorem persius petentium...
-                    </div>
-                </a>
-                <div class="read_full">
-                <center>
-                	<a href="#">
-                    	<span class="glyphicon glyphicon-search" style="margin-right:10px;"></span>
-                    	Read Full Article
-                     </a>
-               	</center>
-                </div>
-            </div><!--End box-->
-            
-            <div class="box_left" title="Sumo aliquip pri cu. Facilisi temporibus">
-            	<a href="#">
-                  <div id="effect-5" class="effects clearfix">
-                      <div class="img">
-                            <img src="img/image-7.jpg" alt="" class="img-responsive image_left"/>
-                            <div class="overlay">
-                                <a href="#" class="expand">+</a>
-                                <a class="close-overlay hidden">-</a>
-                            </div>
-                      </div>
-                  </div>
-                    
-                    <div class="title_left">
-                        
-                         Sumo aliquip pri cu. Facilisi temporibus 
-    
-                    </div>
-                    <div class="post_date_left">
-                        11-Dec-2015 4:29PM
-                    </div>
-                    <div class="description_left">
-                    Sumo aliquip pri cu. Facilisi temporibus pri et. In ubique aliquid pri, ipsum corpora id sea. Has dico invenire in. Everti maiorum voluptatum his in, omnes eligendi vim an, erroribus disputationi concludaturque his cu. Quodsi everti ancillae vim cu, qui ne lorem persius petentium...
-                    </div>
-                </a>
-                <div class="read_full">
-                <center>
-                	<a href="#">
-                    	<span class="glyphicon glyphicon-search" style="margin-right:10px;"></span>
-                    	Read Full Article
-                     </a>
-               	</center>
-                </div>
-            </div><!--End box-->
+                </div><!--End box-->
+                        <?php
+                  }
+                  ?>
         </div>
         <!--Center container-->
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 center">
         
-        	<!--center box-->
-        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_center">
-            	<div class="title_left" style="margin-bottom:10px;">
-                	Sumo aliquip pri cu. Facilisi temporibus pri et
-                </div>
-                <span class="col-xs-12 col-sm-6 col-md-6 col-lg-5 center_image">
-                	<img src="img/image-7.jpg" class="img-responsive"/>
-                </span>
-                <span>	
-                	Sumo aliquip pri cu. Facilisi temporibus pri et. In ubique aliquid pri, ipsum corpora id sea. Has dico invenire in. Everti maiorum voluptatum his in, omnes eligendi vim an, erroribus disputationi...
-                
-                </span>
-                <div class="read_full">
-                <center>
-                	<a href="#">
-                    	<span class="glyphicon glyphicon-search" style="margin-right:10px;"></span>
-                    	Read Full Article
-                     </a>
-               	</center>
-                </div>
-            </div>
-            <!--End center box-->
-            
+          <?php
+         $rs=mysqli_query($con,"Select des_id,title,description,image,post_date from tbdescription order by des_id limit 4,8");
+          while($row=mysqli_fetch_array($rs)){
+            ?>
             <!--center box-->
-        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_center">
-            	<div class="title_left" style="margin-bottom:10px;">
-                	Sumo aliquip pri cu. Facilisi temporibus pri et
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_center">
+                <a href="<?php echo $domain; ?>?single=<?php echo $row[0]; ?>">
+                <div class="title_left" style="margin-bottom:10px;">
+                  <?php echo $row[1]; ?>
                 </div>
                 <span class="col-xs-12 col-sm-6 col-md-6 col-lg-5 center_image">
-                	<img src="img/image-7.jpg" class="img-responsive"/>
+                    <img src="img/<?php echo $row[3]; ?>" class="img-responsive"/>
                 </span>
-                <span>	
-                	Sumo aliquip pri cu. Facilisi temporibus pri et. In ubique aliquid pri, ipsum corpora id sea. Has dico invenire in. Everti maiorum voluptatum his in, omnes eligendi vim an, erroribus disputationi...
-                
+                <span>  
+                   <?php  echo substr($row[2], 0, 370); ?>
                 </span>
                 <div class="read_full">
                 <center>
-                	<a href="#">
-                    	<span class="glyphicon glyphicon-search" style="margin-right:10px;"></span>
-                    	Read Full Article
+                    
+                        <span class="glyphicon glyphicon-search" style="margin-right:10px;"></span>
+                        អាន
                      </a>
-               	</center>
+                </center>
                 </div>
             </div>
             <!--End center box-->
+            <?php
+          }
+          ?>
+        	
             
-            <!--center box-->
-        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_center">
-            	<div class="title_left" style="margin-bottom:10px;">
-                	Sumo aliquip pri cu. Facilisi temporibus pri et
-                </div>
-                <span class="col-xs-12 col-sm-6 col-md-6 col-lg-5 center_image">
-                	<img src="img/image-7.jpg" class="img-responsive"/>
-                </span>
-                <span>	
-                	Sumo aliquip pri cu. Facilisi temporibus pri et. In ubique aliquid pri, ipsum corpora id sea. Has dico invenire in. Everti maiorum voluptatum his in, omnes eligendi vim an, erroribus disputationi...
-                
-                </span>
-                <div class="read_full">
-                <center>
-                	<a href="#">
-                    	<span class="glyphicon glyphicon-search" style="margin-right:10px;"></span>
-                    	Read Full Article
-                     </a>
-               	</center>
-                </div>
-            </div>
-            <!--End center box-->
-            
-            <!--center box-->
-        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_center">
-            	<div class="title_left" style="margin-bottom:10px;">
-                	Sumo aliquip pri cu. Facilisi temporibus pri et
-                </div>
-                <span class="col-xs-12 col-sm-6 col-md-6 col-lg-5 center_image">
-                	<img src="img/image-7.jpg" class="img-responsive"/>
-                </span>
-                <span>	
-                	Sumo aliquip pri cu. Facilisi temporibus pri et. In ubique aliquid pri, ipsum corpora id sea. Has dico invenire in. Everti maiorum voluptatum his in, omnes eligendi vim an, erroribus disputationi...
-                
-                </span>
-                <div class="read_full">
-                <center>
-                	<a href="#">
-                    	<span class="glyphicon glyphicon-search" style="margin-right:10px;"></span>
-                    	Read Full Article
-                     </a>
-               	</center>
-                </div>
-            </div>
-            <!--End center box-->
-            
-            <!--center box-->
-        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_center">
-            	<div class="title_left" style="margin-bottom:10px;">
-                	Sumo aliquip pri cu. Facilisi temporibus pri et
-                </div>
-                <span class="col-xs-12 col-sm-6 col-md-6 col-lg-5 center_image">
-                	<img src="img/image-7.jpg" class="img-responsive"/>
-                </span>
-                <span>	
-                	Sumo aliquip pri cu. Facilisi temporibus pri et. In ubique aliquid pri, ipsum corpora id sea. Has dico invenire in. Everti maiorum voluptatum his in, omnes eligendi vim an, erroribus disputationi...
-                
-                </span>
-                <div class="read_full">
-                <center>
-                	<a href="#">
-                    	<span class="glyphicon glyphicon-search" style="margin-right:10px;"></span>
-                    	Read Full Article
-                     </a>
-               	</center>
-                </div>
-            </div>
-            <!--End center box-->
-            
-            <!--center box-->
-        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_center">
-            	<div class="title_left" style="margin-bottom:10px;">
-                	Sumo aliquip pri cu. Facilisi temporibus pri et
-                </div>
-                <span class="col-xs-12 col-sm-6 col-md-6 col-lg-5 center_image">
-                	<img src="img/image-7.jpg" class="img-responsive"/>
-                </span>
-                <span>	
-                	Sumo aliquip pri cu. Facilisi temporibus pri et. In ubique aliquid pri, ipsum corpora id sea. Has dico invenire in. Everti maiorum voluptatum his in, omnes eligendi vim an, erroribus disputationi...
-                
-                </span>
-                <div class="read_full">
-                <center>
-                	<a href="#">
-                    	<span class="glyphicon glyphicon-search" style="margin-right:10px;"></span>
-                    	Read Full Article
-                     </a>
-               	</center>
-                </div>
-            </div>
-            <!--End center box-->
-            
-            <!--center box-->
-        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_center">
-            	<div class="title_left" style="margin-bottom:10px;">
-                	Sumo aliquip pri cu. Facilisi temporibus pri et
-                </div>
-                <span class="col-xs-12 col-sm-6 col-md-6 col-lg-5 center_image">
-                	<img src="img/image-7.jpg" class="img-responsive"/>
-                </span>
-                <span>	
-                	Sumo aliquip pri cu. Facilisi temporibus pri et. In ubique aliquid pri, ipsum corpora id sea. Has dico invenire in. Everti maiorum voluptatum his in, omnes eligendi vim an, erroribus disputationi...
-                
-                </span>
-                <div class="read_full">
-                <center>
-                	<a href="#">
-                    	<span class="glyphicon glyphicon-search" style="margin-right:10px;"></span>
-                    	Read Full Article
-                     </a>
-               	</center>
-                </div>
-            </div>
-            <!--End center box-->
+           
             
             
         </div>
@@ -418,33 +198,34 @@ include('header.php');
             
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 panel_header">
                     <b> 
-                        <span>Latest review</span>
+                        <span>ទស្សន:</span>
                     </b>
                 </div>
-                <!--Box left small latest post-->
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 latest_review_box">
-                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 img_review">
-                        <a href=""><img class="img_latest" src="img/latest-review-101.jpg"></a>
-                    </div>
-                    <div class="col-xs-6 col-sm-8 col-md-8 com-lg-8 latest_review_box_title">
-                        <a href="#">they are title is here not too short</a>
-                        <p class="desc_review hidden-xs">An d they sup rise us ag ain</p>
-                        <span class="hidden-xs">Posted on 12-12-2015</span>
+                 <?php
+         $rs=mysqli_query($con,"Select des_id,title,image,post_date from tbdescription where catid=4 order by des_id limit 4");
+          while($row=mysqli_fetch_array($rs)){
+            ?>
+             <!--Box left small latest post-->
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 latest_review_box">
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 img_review">
+                    <a href="<?php echo $domain;?>?single=<?php echo $row[0];?>"><img class="img_latest" src="img/latest-review-101.jpg"></a>
+                </div>
+                <div class="col-xs-6 col-sm-8 col-md-8 com-lg-8 latest_review_box_title">
+                    <a href="<?php echo $domain;?>?single=<?php echo $row[0];?>"><?php echo $row[1]; ?></a>
+                    <div class="hidden-xs" style="color:#999;">
+                        <?php
+                         $date=date_create($row[3]);
+                         echo date_format($date,"y/m/d H:i:s"); 
+                        ?>
                     </div>
                 </div>
-                
-                <!--Box left small latest post-->
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 latest_review_box">
-                
-                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 img_review">
-                        <a href=""><img class="img_latest" src="img/latest-review-101.jpg"></a>
-                    </div>
-                    <div class="col-xs-6 col-sm-8 col-md-8 com-lg-8 latest_review_box_title">
-                        <a href="#">they are title is here not too short</a>
-                        <p class="desc_review hidden-xs">An d they sup rise us ag ain</p>
-                        <span class="hidden-xs">Posted on 12-12-2015</span>
-                    </div>
-                </div>
+            </div>
+            
+            <?php
+            }
+            ?>
+               
+               
             </div>
         </div>     
         
@@ -452,368 +233,182 @@ include('header.php');
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 right">
     
     	<b class="btn btn-primary col-sm-12" style="cursor:default;">
-        	General Knowlege
+        	ព័ត៍មានទាន់ហេតុការណ៍
         </b>
-    	<!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
+         <?php
+         $rs=mysqli_query($con,"Select des_id,title,image,post_date from tbdescription order by des_id limit 12,6");
+          while($row=mysqli_fetch_array($rs)){
+            ?>
+            <!--box right-->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
+                 <a href=" <?php echo $domain; ?>?single= <?php echo $row[0]; ?>">
+                <span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
                 
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
+                <img src="img/<?php echo $row[2]; ?>" class="img-responsive"/>
+                    
+                     <div class="overlay">
+                       
+                    </div>
+                </span>
                 
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
+                <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
+                   <?php echo $row[1]; ?>
+                </span>
+                </a>
+            </div>
+            <!--End box right-->
+            <?php
+          }
+          ?>
+
+
+        <b class="btn btn-primary col-sm-12" style="cursor:default;">
+            ចំរៀង
+        </b>
+         <?php
+         $rs=mysqli_query($con,"Select des_id,title,image,post_date from tbdescription where catid=7 order by des_id limit 10");
+          while($row=mysqli_fetch_array($rs)){
+            ?>
+            <!--box right-->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
+                 <a href=" <?php echo $domain; ?>?single= <?php echo $row[0]; ?>">
+                <span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
                 
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
+                <img src="img/<?php echo $row[2]; ?>" class="img-responsive"/>
+                    
+                     <div class="overlay">
+                       
+                    </div>
+                </span>
                 
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
+                <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
+                   <?php echo $row[1]; ?>
+                </span>
+                </a>
+            </div>
+            <!--End box right-->
+            <?php
+          }
+          ?>
+
+
+          <b class="btn btn-primary col-sm-12" style="cursor:default;border:none;">
+            កីឡា
+        </b>
+         <?php
+         $rs=mysqli_query($con,"Select des_id,title,image,post_date from tbdescription where catid=10 order by des_id limit 6");
+          while($row=mysqli_fetch_array($rs)){
+            ?>
+            <!--box right-->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
+                 <a href=" <?php echo $domain; ?>?single= <?php echo $row[0]; ?>">
+                <span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
                 
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
+                <img src="img/<?php echo $row[2]; ?>" class="img-responsive"/>
+                    
+                     <div class="overlay">
+                       
+                    </div>
+                </span>
                 
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right--><!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
-        <!--box right-->
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box_right" id="effect-6">
-       		 <a href="#">
-        	<span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
-            
-            <img src="img/image-7.jpg" class="img-responsive"/>
-                
-                 <div class="overlay">
-                   
-                </div>
-            </span>
-            
-            <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
-            	Sumo aliquip pri cu. Facilisi temporibus pri.....
-            </span>
-			</a>
-        </div>
-        <!--End box right-->
+                <span class="col-xs-6 col-sm-7 col-md-7 col-lg-7 right_title">
+                   <?php echo $row[1]; ?>
+                </span>
+                </a>
+            </div>
+            <!--End box right-->
+            <?php
+          }
+          ?>
+    	
+        
         
         
         
         
     </div>
     <!--end of right side-->
-    <!--pagination-->
-    <div>
-    	<center>
-     		<ul class="pagination">
-              <li><a href="#"> First </a></li>
-              <li class="active"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#"> Last </a></li>
-            </ul>
-      	</center>
+   <!--pagination-->
+    <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+    <?php
+      $last_pagin=1;
+      $pagin=1;
+       $rs=mysqli_query($con,"SELECT count(*) FROM tbdescription");
+      while($row=mysqli_fetch_array($rs)){
+        $last_pagin=$row[0];
+        $last_pagin=ceil($last_pagin/12);
+      }
+      ?>
+             <center>
+               <ul class="pagination">
+                <?php
+                if($last_pagin<=1){
+
+                }
+                else if($last_pagin<=8){
+                  for($i=1;$i<=$last_pagin;$i++){
+                    if($i==$pagin){
+                      ?>
+                       <li class="active"><a href="#"><?php echo $i; ?></a></li>
+                      <?php
+                    }
+                    else{
+                    ?>
+                    <li><a href="<?php echo $domain; ?>?pagin=<?php echo $i; ?>&cat=0"><?php echo $i; ?></a></li>
+                    <?php
+                    }
+                  }
+                }
+                else if($pagin>=($last_pagin-2)){
+                  ?>
+                  <li><a href="<?php echo $domain; ?>?pagin=1&cat=0">1</a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=2&cat=0">2</a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=3&cat=0">3</a></li>
+                  <li><a href="#">...</a></li>
+                  <li <?php if($pagin==($last_pagin-2)){echo 'class="active"';} ?>><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin-2; ?>0"><?php echo $last_pagin-2; ?></a></li>
+                 <li <?php if($pagin==($last_pagin-1)){echo 'class="active"';} ?>><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin-1; ?>&cat=0"><?php echo $last_pagin-1; ?></a></li>
+                 <li <?php if($pagin==($last_pagin)){echo 'class="active"';} ?>><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin; ?>&cat=0"><?php echo $last_pagin; ?></a></li>
+                  
+                  <?php
+                }
+                else if($pagin>8){
+                  ?>
+                  <li><a href="<?php echo $domain; ?>?pagin=1&cat=0">1</a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=2&cat=0">2</a></li>
+
+                  <li><a href="#">...</a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $pagin-1; ?>&cat=0"><?php echo $pagin-1; ?></a></li>
+                  <li class="active"><a href="<?php echo $domain; ?>?pagin=<?php echo $pagin; ?>&cat=0"><?php echo $pagin; ?></a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $pagin+1; ?>&cat=0"><?php echo $pagin+1; ?></a></li>
+                  <li><a href="#">...</a></li>
+
+                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin-1; ?>&cat=0"><?php echo $last_pagin-1; ?></a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin; ?>&cat=0"><?php echo $last_pagin; ?></a></li>
+                  <?php
+                }
+                else{
+                  for($i=1;$i<5;$i++){
+                    if($i==$pagin){
+                      ?>
+                      <li class="active"><a href="#"><?php echo $i; ?></a></li>
+                      <?php
+                    }
+                    else{
+                      ?>
+                      <li><a href="<?php echo $domain; ?>?pagin=<?php echo $i; ?>&cat=0"><?php echo $i; ?></a></li>
+                      <?php
+                    }
+                  }
+                  ?>
+                  <li><a href="#">...</a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin-2; ?>&cat=0"><?php echo $last_pagin-2; ?></a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin-1; ?>&cat=0"><?php echo $last_pagin-1 ?></a></li>
+                  <li><a href="<?php echo $domain; ?>?pagin=<?php echo $last_pagin; ?>&cat=0"><?php echo $last_pagin; ?></a></li>
+                <?php 
+                }
+                ?>
+                </ul>
+            </center>
       </div>
     <!--End pagin-->
 

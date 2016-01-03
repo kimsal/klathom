@@ -39,44 +39,47 @@ else
     	<?php
     	$catid=$_GET['cat'];
     	$help=0;
+      if($catid==0)
+         $rs=mysqli_query($con,"Select des_id,title,image,description,post_date from tbdescription limit ".(($pagin-1)*12).',12');
+      else
          $rs=mysqli_query($con,"Select des_id,title,image,description,post_date from tbdescription where catid=".$catid.' limit '.(($pagin-1)*12).',12');
-          while($row=mysqli_fetch_array($rs)){
-          	if($help==3){
-          		?>
-          		 <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 break-line">
-            	</div>
-          		<?php
-          		$help=0;
-          	}
-          	$help++;
+        while($row=mysqli_fetch_array($rs)){
+        	if($help==3){
+        		?>
+        		 <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 break-line">
+          	</div>
+        		<?php
+        		$help=0;
+        	}
+        	$help++;
 
-          	?>
-          	<!--center box-->
-        	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 box_center" style="border-bottom:none;padding:10px 15px;">
-        		<a href="<?php echo $domain; ?>?single=<?php echo $row[0]; ?>">
-            	<div class="title_left" style="margin-bottom:10px;">
-                	<?php echo $row[1]; ?>
-                </div>
-           		 
-                <span class="col-xs-12 col-sm-6 col-md-6 col-lg-5 center_image">
-                	<img src="img/<?php echo $row[2]; ?>" class="img-responsive" title="<?php echo $row[1]; ?>"/>
-                </span>
-                <span>	
-                	<?php
-                		echo substr($row[3], 0, 370);
-                	?>
-                </span>
+        	?>
+        	<!--center box-->
+      	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 box_center" style="border-bottom:none;padding:10px 15px;">
+      		<a href="<?php echo $domain; ?>?single=<?php echo $row[0]; ?>">
+          	<div class="title_left" style="margin-bottom:10px;">
+              	<?php echo $row[1]; ?>
+              </div>
+         		 
+              <span class="col-xs-12 col-sm-6 col-md-6 col-lg-5 center_image">
+              	<img src="img/<?php echo $row[2]; ?>" class="img-responsive" title="<?php echo $row[1]; ?>"/>
+              </span>
+              <span>	
+              	<?php
+              		echo substr($row[3], 0, 370);
+              	?>
+              </span>
 
-                <div class="read_full">
-                <center>
-                    	<span class="glyphicon glyphicon-search" style="margin-right:10px;"></span>
-                    	អានលំអិត
-               	</center>
-                </div>
-                </a>
-            </div>
-            <!--End center box-->
-          	<?php
+              <div class="read_full">
+              <center>
+                  	<span class="glyphicon glyphicon-search" style="margin-right:10px;"></span>
+                  	អានលំអិត
+             	</center>
+              </div>
+              </a>
+          </div>
+          <!--End center box-->
+        	<?php
     	  }
       ?>
             
@@ -93,7 +96,10 @@ else
     <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
     <?php
       $last_pagin=1;
-       $rs=mysqli_query($con,"SELECT count(*) FROM tbdescription where catid=".$catid);
+      if($catid==0)
+         $rs=mysqli_query($con,"SELECT count(*) FROM tbdescription");
+      else
+        $rs=mysqli_query($con,"SELECT count(*) FROM tbdescription where catid=".$catid);
       while($row=mysqli_fetch_array($rs)){
         $last_pagin=$row[0];
         $last_pagin=ceil($last_pagin/12);

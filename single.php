@@ -54,7 +54,8 @@ $single=$_GET['single'];
             <br/><br/>
             Posted date : <?php
                  $date=date_create($row[5]);
-                    echo date_format($date,"y/m/d H:i:s"); ?>
+                 echo date_format($date,"y/m/d H:i:s"); 
+                ?>
             </div>
             <?php
           }
