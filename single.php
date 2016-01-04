@@ -77,7 +77,7 @@ $single=$_GET['single'];
                      <!--Box left small latest post-->
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 latest_review_box">
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 img_review">
-                            <a href="<?php echo $domain; ?>/single=<?php echo $row[0]; ?>"><img class="img_latest img-responsive" src="img/<?php echo $row[3]; ?>">
+                            <a href="<?php echo $domain; ?>?single=<?php echo $row[0]; ?>"><img class="img_latest img-responsive" src="img/<?php echo $row[3]; ?>">
                         </div>
                         <div class="col-xs-6 col-sm-8 col-md-8 com-lg-8 latest_review_box_title">
                            <?php echo $row[1]; ?>
