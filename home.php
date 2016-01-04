@@ -233,7 +233,7 @@ include('header.php');
     </div>
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 right">
     
-    	<b class="btn btn-primary col-sm-12" style="cursor:default;">
+    	<b class="btn btn-primary col-sm-12 col-xs-12 col-md-12 col-lg-12" style="cursor:default;">
         	ព័ត៍មានទាន់ហេតុការណ៍
         </b>
          <?php
@@ -263,7 +263,7 @@ include('header.php');
           ?>
 
 
-        <b class="btn btn-primary col-sm-12" style="cursor:default;">
+        <b class="btn btn-primary col-sm-12  col-xs-12 col-md-12 col-lg-12" style="cursor:default;">
             ចំរៀង
         </b>
          <?php
@@ -293,7 +293,7 @@ include('header.php');
           ?>
 
 
-          <b class="btn btn-primary col-sm-12" style="cursor:default;border:none;">
+          <b class="btn btn-primary col-sm-12  col-xs-12 col-md-12 col-lg-12" style="cursor:default;border:none;">
             កីឡា
         </b>
          <?php
