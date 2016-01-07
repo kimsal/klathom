@@ -380,14 +380,14 @@ a.expand {
 	font-size:25px;
 }
 #leg1{
-    color:#FFF;
+    color:#000;
     font-size: 15px;
     padding-top: 15px;
     cursor:pointer;
 }
 #leg1:hover{
     text-decoration: underline;
-    color: #ffffff;
+    color: #000;
 }
 .ab{
     font-size: 16px;

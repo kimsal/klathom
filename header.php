@@ -5,16 +5,17 @@
 <meta name"description" content=""/>
 <meta name"keywords" content=""/>
 <link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/custom.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- jQuery library -->
 <script src="js/jquery.min.js"></script>
 <script src="js/custome.js"></script>
 <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/modernizr.js"></script>
- <script type="text/javascript" src="js/jssor.js"></script>
-    <script type="text/javascript" src="js/jssor.slider.js"></script>
+<script type="text/javascript" src="js/jssor.js"></script>
+<script type="text/javascript" src="js/jssor.slider.js"></script>
 <link rel="shortcut icon" type="image/png" href="img/logo.png" />
 <title>ខ្លាធំ​</title>
 </head>
