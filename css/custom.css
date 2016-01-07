@@ -530,6 +530,7 @@ margin:0px;
 		border-bottom:1px dotted #666666;
 		border-top:1px dotted #666666;
 		min-height:40px;
+    line-height: 40px;
 }
 .single_content{
 	padding:15px 10px;
