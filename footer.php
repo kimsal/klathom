@@ -11,7 +11,7 @@
             </div>
             <script type="text/javascript">
               $(document).ready(function(){
-                $(".dropdown-toggle").dropdown();
+                $(".dropdown-toggle").dropup();
               });  
             </script>
             <div class="col-sm-4 col-xs-12 col-md-4">
