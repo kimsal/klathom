@@ -21,19 +21,18 @@
 <body>
 <?php
 include('config/config.php');
-?><!--
+?>
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 hidden-xs" id="banner_top">
-	<center>
-    	<img src="img/logo.png" class="img-responsive" style="height:90px;margin-top:10px;"/>
+    <center>
+        <img src="img/logo.png" class="img-responsive" style="height:90px;margin-top:10px;"/>
     </center> 
 
 </div>
 <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" id="banner_top">
-	<img src="img/banner-468x60.jpg" class="img-responsive" style="height:90px;margin-top:10px;"/>
+    <img src="img/banner-468x60.jpg" class="img-responsive" style="height:90px;margin-top:10px;"/>
 </div>
--->
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="menu_top1">
-	<!--sart menu 1-->
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="menu_top1">
+    <!--sart menu 1-->
     <nav class="navbar-default" role="navigation" style="background-color: #F6F6F6">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -46,15 +45,16 @@ include('config/config.php');
         </div>
         <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav myover" >
+                <li><a href="<?php echo $domain; ?>">គេហទំព័រដើម</a></li>   
                 <?php
                  $rs=mysqli_query($con,"Select * from tbcategory");
-	              while($row=mysqli_fetch_array($rs)){
-	              	?>
-	              	<li><a href="<?php echo $domain; ?>?cat=<?php echo $row[0] ?>">	
-	              		<?php echo $row[1]; ?>
-	              	</a></li>
-	              	<?php
-	              }
+                  while($row=mysqli_fetch_array($rs)){
+                    ?>
+                    <li><a href="<?php echo $domain; ?>?cat=<?php echo $row[0] ?>"> 
+                        <?php echo $row[1]; ?>
+                    </a></li>
+                    <?php
+                  }
                 ?>
 
                 
