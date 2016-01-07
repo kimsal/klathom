@@ -1,10 +1,21 @@
 <!DOCTYPE html>
+<?php
+    include('admin/checklogin.php');
+    echo $checklogin;
+    if($checklogin==1){
+        ?>
+        <script type="text/javascript">
+           location.href = "<?php echo $domain; ?>?admin=1";
+        </script>
+        <?php
+    }
+?>
 <html>
 <head>
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <meta charset="UTF-8">
 
-<title>Elegant Login - Designscrazed</title>
+<title>Login</title>
 <style>
 body {
     background: url('http://i.imgur.com/Eor57Ae.jpg') no-repeat fixed center center;
@@ -102,9 +113,43 @@ body {
 <div class="logo"></div>
 <div class="login-block">
     <h1>Login</h1>
-    <input type="text" value="" placeholder="ឈ្មោះ" id="username" required/>
-    <input type="password" value="" placeholder="លេខកូដ" id="password" required/>
+    <form method="post">
+    <input type="text" value="" placeholder="ឈ្មោះ" name="username" required/>
+    <input type="password" value="" placeholder="លេខកូដ" name="password" required/>
+    <input type="hidden" name="ch"/>
     <input type="submit" class="btn" value="Login"/>
+    </form>
+    <?php 
+    if(isset($_POST['ch'])){
+        include('config/config.php');
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+        $username = stripslashes($username);
+        $password = stripslashes($password);
+        $username = mysql_real_escape_string($username);
+        $password = mysql_real_escape_string($password);
+        $rs=mysqli_query($con,"Select * from tbuser Where login_name='".$username."' AND password='".md5($password)."'");
+        $count=0;
+        while($row=mysqli_fetch_array($rs)){
+            $count=1;
+        }
+        if($count==0){
+            echo '<h4 style="color:red;">Invalid username or Password!</h4>';
+        }
+        else{
+            //password will expired in 30 days afte login in
+            setcookie("khlathom_username", $username, time() + (86400 * 30),'/'); // 86400 = 1 day
+            setcookie("khlathom_password", $password, time() + (86400 * 30),'/'); // 86400 = 1 day
+           // echo 'user name = '.$_COOKIE['khlathom_username'].' pwd ='.$_COOKIE['khlathom_password'];
+            ?>
+            <script type="text/javascript">
+               location.href = "<?php echo $domain; ?>?admin=1";
+            </script>
+            <?php
+        }           
+    }
+    
+    ?>
 </div>
 </body>
 
