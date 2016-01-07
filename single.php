@@ -40,12 +40,15 @@ $single=$_GET['single'];
          $rs=mysqli_query($con,"Select * from tbdescription where des_id= ".$single);
           while($row=mysqli_fetch_array($rs)){
             $catid=$row[4];
+            $view=$row[9];
             ?>
             <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12 single_title">
                 <?php echo $row[1]; ?>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 single_social">
-                
+                <span class="col-xs-4 col-sm-3 col-md-3 col-lg-3" style="color:#999;font-size:16px;padding:0px;margin:0px;">
+                    <?php echo $view=$row[9]; ?> views
+                </span>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 single_content">
             <?php echo $row[2]; ?>
@@ -176,5 +179,6 @@ $single=$_GET['single'];
 
 
 <?php
+mysqli_query($con,"update tbdescription set view=".($view+1)." where des_id=".$single);
 include('footer.php');
 ?>

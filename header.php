@@ -18,6 +18,7 @@
 <script type="text/javascript" src="js/jssor.slider.js"></script>
 <link rel="shortcut icon" type="image/png" href="img/logo.png" />
 <title>ខ្លាធំ​</title>
+
 </head>
 <body>
 <?php
@@ -46,7 +47,8 @@ include('config/config.php');
         </div>
         <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav myover" >
-                <li><a href="<?php echo $domain; ?>">គេហទំព័រដើម</a></li>   
+                <li><a href="<?php echo $domain; ?>">ទំព័រដើម</a></li>  
+
                 <?php
                  $rs=mysqli_query($con,"Select * from tbcategory");
                   while($row=mysqli_fetch_array($rs)){

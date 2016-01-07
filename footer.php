@@ -7,10 +7,10 @@
                 <img class="img-responsive fbcon1" src="img/Twitterbird.png" />
             </div>
             <script type="text/javascript">
-$(document).ready(function(){
-  $(".dropdown-toggle").dropdown();
-});  
-</script>
+              $(document).ready(function(){
+                $(".dropdown-toggle").dropdown();
+              });  
+            </script>
             <div class="col-sm-4 col-xs-12 col-md-4">
             
               <div class="dropdown">
@@ -35,20 +35,20 @@ $(document).ready(function(){
 
             </div>
             <div class="col-sm-4 col-xs-12 col-md-4">
-                <ul>
-                 <?php
-                 $rs=mysqli_query($con,"Select pid,pname from tbpage");
-                  while($row=mysqli_fetch_array($rs)){
-                    ?>
-                   <li class="listfooter">
-                        <a href="<?php echo $domain; ?>?page=<?php echo $row[0]; ?>">
-                            <label id="leg1" style="cursor:pointer;"><?php echo $row[1]; ?></label>
-                        </a>
-                    </li>
-                    <?php
-                  }
-                ?>
-                </ul>
+              <ul>
+               <?php
+               $rs=mysqli_query($con,"Select pid,pname from tbpage");
+                while($row=mysqli_fetch_array($rs)){
+                  ?>
+                 <li class="listfooter">
+                      <a href="<?php echo $domain; ?>?page=<?php echo $row[0]; ?>">
+                          <label id="leg1" style="cursor:pointer;"><?php echo $row[1]; ?></label>
+                      </a>
+                  </li>
+                  <?php
+                }
+              ?>
+              </ul>
             </div>
             <!--end of footer-->
         </div>
