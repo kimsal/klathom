@@ -43,14 +43,12 @@ if(isset($_GET['cat']))
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">KHLATHOM.COM</a>
+          <a class="navbar-brand" href="#">KHLATHOM.NET</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
           	<li><a href="<?php echo $domain; ?>?admin=1&logout">Log Out</a></li>
-            <li><a href="#">Settings</a></li>
             <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -66,7 +64,8 @@ if(isset($_GET['cat']))
          <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
            
             <ul class="nav nav-sidebar">
-             <li class="active"><a href="<?php echo $domain; ?>?admin=1">Dashboard</a></li> 
+             <li class="active"><a href="<?php echo $domain; ?>">View site</a></li> 
+             <li><a href="<?php echo $domain; ?>?admin=1">Dashboard</a></li> 
                <?php
 			
                  $rs=mysqli_query($con,"Select * from tbcategory");
@@ -90,7 +89,9 @@ if(isset($_GET['cat']))
           <hr>
 
           <center><h2 class="sub-header"><u>Show data</h2></u></center>
-          <a href="" class="btn btn-primary" style="float:right;">Add New</a>
+          <a href="<?php echo $domain; ?>?admin&category" class="btn btn-primary" style="float:right;">New Category</a>
+          <a href="<?php echo $domain; ?>?admin&page" class="btn btn-primary" style="float:right;margin:0 15px;">New Page</a>
+          <a href="<?php echo $domain; ?>?admin&info=new" class="btn btn-primary" style="float:right;">Add New Information</a>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -117,7 +118,7 @@ if(isset($_GET['cat']))
                   <td>
                   	<?php echo $row[0]; ?>
                   </td>
-                  <td><a href="">
+                  <td><a href="<?php echo $domain; ?>?admin&info=update&id=<?php echo $row[0]; ?>">
              	    <?php echo $row[1]; ?>
                   </a></td>
                   <td>
@@ -233,7 +234,7 @@ if(isset($_GET['cat']))
 </div><!--/.container-->
 
 <footer>
-  <p class="pull-right">©2015 ខ្លាធំ</p>
+  <p class="pull-right">©2016 ខ្លាធំ</p>
 </footer>
         
 	<!-- script references -->

@@ -1,5 +1,5 @@
 <?php
-$domain="http://localhost:8585/klathom/";
+$domain="http://localhost:88/klathom/";
 if(isset($_GET['single'])){
 	include('single.php');
 }
@@ -18,6 +18,15 @@ else if(isset($_GET['admin'])){
 	}
 	else if(isset($_GET['logout'])){
 		include('admin/logout.php');
+	}
+	else if(isset($_GET['info'])){
+		include('admin/information.php');
+	}
+	else if(isset($_GET['page'])){
+		include('admin/page.php');
+	}
+	else if(isset($_GET['category'])){
+		include('admin/category.php');
 	}
 	else
 		include('admin/admin.php');	
