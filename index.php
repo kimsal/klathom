@@ -1,5 +1,5 @@
 <?php
-$domain="http://localhost:88/klathom/";
+$domain="http://localhost:8585/klathom/";
 if(isset($_GET['single'])){
 	include('single.php');
 }
