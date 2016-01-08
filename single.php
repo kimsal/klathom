@@ -50,11 +50,30 @@ $single=$_GET['single'];
                     <?php echo $view=$row[9]; ?> views
                 </span>
             </div>
+
+            <!--Sound-->
+            <div style="position:relative;width:60%;height:45px;overflow:hidden;background-color:blue">
+              <div style="position:absolute;top:-266px;left:-5px;width:100%;background-color:blue">
+                <iframe style="width:100%;" height="300" 
+                  src="https://www.youtube.com/embed/S9hVbVJNDyc">
+                </iframe>
+              </div>
+            </div>
+
+
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 single_content">
             <?php echo $row[2]; ?>
             <br/><br/>
-            <img src="img/<?php echo $row[3]; ?>" title="<?php echo $row[1]; ?>" class="img-responsive"/>
+            <img src="img/upload/<?php echo $row[3]; ?>" title="<?php echo $row[1]; ?>" class="img-responsive"/>
             <br/><br/>
+
+            <div style="position:relative;width:300px;height:45px;overflow:hidden;">
+  <div style="position:absolute;top:-276px;left:-5px">
+    <iframe width="300" height="300" 
+      src="https://www.youtube.com/embed/S9hVbVJNDyc">
+    </iframe>
+  </div>
+</div>
             Posted date : <?php
                  $date=date_create($row[5]);
                  echo date_format($date,"y/m/d H:i:s"); 
@@ -80,7 +99,7 @@ $single=$_GET['single'];
                      <!--Box left small latest post-->
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 latest_review_box">
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 img_review">
-                            <a href="<?php echo $domain; ?>?single=<?php echo $row[0]; ?>"><img class="img_latest img-responsive" src="img/<?php echo $row[3]; ?>">
+                            <a href="<?php echo $domain; ?>?single=<?php echo $row[0]; ?>"><img class="img_latest img-responsive" src="img/upload/<?php echo $row[3]; ?>">
                         </div>
                         <div class="col-xs-6 col-sm-8 col-md-8 com-lg-8 latest_review_box_title">
                            <?php echo $row[1]; ?>
@@ -117,7 +136,7 @@ $single=$_GET['single'];
                  <a href=" <?php echo $domain; ?>?single=<?php echo $row[0]; ?>">
                 <span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
                 
-                <img src="img/<?php echo $row[3]; ?>" class="img-responsive"/>
+                <img src="img/upload/<?php echo $row[3]; ?>" class="img-responsive"/>
                     
                      <div class="overlay">
                        

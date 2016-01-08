@@ -13,7 +13,7 @@ include('header.php');
                     <ul style="margin-top: 7px; ">
 
                     	<?php
-		                 $rs=mysqli_query($con,"Select des_id,title from tbdescription order by des_id limit 2");
+		                 $rs=mysqli_query($con,"Select des_id,title from tbdescription order by des_id DESC limit 10");
 		                  while($row=mysqli_fetch_array($rs)){
 		                    ?>
 			                  <li style="display: inline; margin-left: 2px;">
@@ -49,7 +49,7 @@ include('header.php');
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 650px; height: 300px;margin-top:4px;
             overflow: hidden;">
             <?php
-             $rs=mysqli_query($con,"Select des_id,title,image from tbdescription");
+             $rs=mysqli_query($con,"Select des_id,title,image from tbdescription order by des_id DESC limit 6");
               while($row=mysqli_fetch_array($rs)){
               	?>
             	  <div>
@@ -112,7 +112,7 @@ include('header.php');
         
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 left">
              <?php
-                 $rs=mysqli_query($con,"Select des_id,title,description,image,post_date from tbdescription order by des_id limit 4");
+                 $rs=mysqli_query($con,"Select des_id,title,description,image,post_date from tbdescription order by des_id DESC limit 4");
                   while($row=mysqli_fetch_array($rs)){
                     ?>
                     <div class="box_left" title="Sumo aliquip pri cu. Facilisi temporibus">
@@ -159,7 +159,7 @@ include('header.php');
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 center">
         
           <?php
-         $rs=mysqli_query($con,"Select des_id,title,description,image,post_date from tbdescription order by des_id limit 4,8");
+         $rs=mysqli_query($con,"Select des_id,title,description,image,post_date from tbdescription order by des_id DESC limit 4,8");
           while($row=mysqli_fetch_array($rs)){
             ?>
             <!--center box-->
@@ -297,7 +297,7 @@ include('header.php');
             កីឡា
         </b>
          <?php
-         $rs=mysqli_query($con,"Select des_id,title,image,post_date from tbdescription where catid=10 order by des_id limit 6");
+         $rs=mysqli_query($con,"Select des_id,title,image,post_date from tbdescription where catid=10 order by des_id DESC limit 6");
           while($row=mysqli_fetch_array($rs)){
             ?>
             <!--box right-->

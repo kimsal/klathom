@@ -164,20 +164,14 @@ if(isset($_GET['id'])){
                 <?php
                 if($type=='new'){
                   ?>
-                  <button type="submit" class="btn btn-primary">
-                  Add New
-                  </button>
+                  <input type="submit" class="btn btn-primary" value="Add New" name="btn">
                   <?php
                   }
                 else{
                   ?>
-                  <button type="submit" class="btn btn-primary">
-                  Update
-                  </button>
-                  <button type="submit" class="btn btn-primary" style="background-color:#900;font-weight:bold;">
-                  Delete
-                  </button>
-                  <?Php
+                  <input type="submit" class="btn btn-primary" name="btn" value="Update" name="btn">
+                  <input type="submit" class="btn btn-primary" value="Delete" name="btn" style="background-color:#900;font-weight:bold;">        
+                   <?Php
                 }
                   ?>
                   <button type="reset" class="btn btn-default" onclick="getback();">Cancel</button>
@@ -193,7 +187,7 @@ function getback(){
 <?php
 if(isset($_POST['ch'])){
    include('config/config.php');
- //  echo 'image = '.$_FILES['img']['name'];
+if($_POST['btn']!='Delete'){
   if($_FILES['img']['name']==''){
       $newimage=$image;
   }
@@ -202,24 +196,24 @@ if(isset($_POST['ch'])){
   $newtitle=$_POST['title'];
   $newdes=$_POST['desc'];
   $newcatid=$_POST['category'];
+  $uploadOk=1;
 
   $newsound=str_replace("<","&lt;",$_POST['sound']);
   $newsound=str_replace(">","&gt;",$newsound);
   //echo $newimage.'='.$newtitle.'='.$newdes.'='.$newcatid.'='.$newsound;
-  if($newimage!=''){
+  if($newimage!=$image){
     $target_dir = "img/upload/";
     $target_file = $target_dir . basename($_FILES["img"]["name"]);
     $uploadOk = 1;
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
     $check = getimagesize($_FILES["img"]["tmp_name"]);
-        if($check !== false) {
-            echo "File is an image - " . $check["mime"] . ".";
-            $uploadOk = 1;
-        } else {
-            echo "File is not an image.";
-            $uploadOk = 0;
-        }
+    if($check !== false) {
+        echo "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+    } else {
+        echo "File is not an image.";
+        $uploadOk = 0;
     }
     // Check if file already exists
     if (file_exists($target_file)) {
@@ -243,19 +237,32 @@ if(isset($_POST['ch'])){
             echo "Sorry, there was an error uploading your file.";
         }
     }
-  if($uploadOk!=0){
-    //echo $_COOKIE['khlathom_userid'];
-    if($type=='new'){
-      mysqli_query($con,"INSERT INTO tbdescription(title,description,image,catid,post_date,uid,sound,updated_date) values('".$newtitle."' , '".$newdes."','".$newimage."',".$newcatid.",now(),".$_COOKIE['khlathom_userid'].",'".$newsound."',now())");
-      echo '<h3 style="color:blue">Inserted successfully</h3>';
-    }
-    else{
-      mysqli_query($con,"update tbdescription set title='".$newtitle."',description='".$newdes."',image='".$newimage."',catid=".$newcatid.",uid=".$_COOKIE['khlathom_userid'].",sound='".$newsound."',updated_date=now() where des_id=".$des_id);
-      echo '<h3 style="color:blue">Updated successfully</h3>';
-    }
- }
-   
 }
+if($uploadOk!=0){
+  //echo $_COOKIE['khlathom_userid'];
+  if($type=='new'){
+    mysqli_query($con,"INSERT INTO tbdescription(title,description,image,catid,post_date,uid,sound,updated_date) values('".$newtitle."' , '".$newdes."','".$newimage."',".$newcatid.",now(),".$_COOKIE['khlathom_userid'].",'".$newsound."',now())");
+    echo '<h3 style="color:blue">Inserted successfully</h3>';
+  }
+  else{
+    mysqli_query($con,"update tbdescription set title='".$newtitle."',description='".$newdes."',image='".$newimage."',catid=".$newcatid.",uid=".$_COOKIE['khlathom_userid'].",sound='".$newsound."',updated_date=now() where des_id=".$des_id);
+    echo '<h3 style="color:blue">Updated successfully</h3>';
+  }
+ }  
+}
+else{
+      mysqli_query($con,"DELETE FROM tbdescription where des_id=".$des_id);
+      ?>
+      <script type="text/javascript">
+      alert('Deletet successfully');
+      location.href="<?php echo $domain.'?admin' ?>";
+      </script>
+      <?php
+       
+      
+    }
+}
+
 ?>
 
 
