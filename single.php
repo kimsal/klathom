@@ -46,21 +46,30 @@ $single=$_GET['single'];
                 <?php echo $row[1]; ?>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 single_social">
-                <span class="col-xs-4 col-sm-3 col-md-3 col-lg-3" style="color:#999;font-size:16px;padding:0px;margin:0px;">
+                
+                 <span class="col-xs-4 col-sm-3 col-md-3 col-lg-3" style="color:#999;font-size:16px;padding:0px;margin:0px;">
                     <?php echo $view=$row[9]; ?> views
                 </span>
+                  <!--facebook like post-->
+                <ol class="breadcrumb" style="line-height:0px;">
+                     <div class="fb-like" data-href="<?php echo $domain.$_SERVER['REQUEST_URI']; ?>" data-width="100%" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+                 </ol>
             </div>
-
-            <!--Sound-->
-            <div style="position:relative;width:60%;height:45px;overflow:hidden;background-color:blue">
-              <div style="position:absolute;top:-266px;left:-5px;width:100%;background-color:blue">
-                <iframe style="width:100%;" height="300" 
-                  src="https://www.youtube.com/embed/S9hVbVJNDyc">
-                </iframe>
-              </div>
+             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                     <!--Sound-->
+                <div style="position:relative;width:60%;height:35px;overflow:hidden;margin:7px;float:left;">
+                  <div style="position:absolute;top:-270px;left:-5px;width:100%;">
+                    <iframe style="width:100%;" height="300" 
+                      src="https://www.youtube.com/embed/S9hVbVJNDyc">
+                    </iframe>
+                  </div>
+                </div>
+                 
+                 
+                <b​ style="color:#00C;font-size:25px;margin:5px 0px;font-weight:bold;">ស្តាប់សម្លេង</b>
+                
             </div>
-
-
+            
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 single_content">
             <?php echo $row[2]; ?>
             <br/><br/>
