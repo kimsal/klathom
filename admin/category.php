@@ -66,7 +66,7 @@ if(isset($_GET['catid'])){
       
       <div class="row row-offcanvas row-offcanvas-left">
         
-         <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
+         <div class="col-sm-3 col-md-2" id="sidebar" role="navigation">
            
             <ul class="nav nav-sidebar">
              <li class="active"><a href="<?php echo $domain; ?>">View site</a></li> 

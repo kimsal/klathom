@@ -61,7 +61,7 @@ if(isset($_GET['cat']))
       
       <div class="row row-offcanvas row-offcanvas-left">
         
-         <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
+         <div class="col-sm-3 col-md-2" id="sidebar" role="navigation">
            
             <ul class="nav nav-sidebar">
              <li class="active"><a href="<?php echo $domain; ?>">View site</a></li> 
@@ -106,7 +106,7 @@ if(isset($_GET['cat']))
               <tbody>
               <?php
 			  if($catid==0){
-              	$rs=mysqli_query($con,"Select tbdescription.des_id , tbdescription.title , tbdescription.post_date , tbuser.first_name,tbdescription.view from tbdescription INNER JOIN tbuser ON tbuser.uid = tbdescription.uid limit ".(($pagin-1)*20).",20");
+              	$rs=mysqli_query($con,"Select tbdescription.des_id , tbdescription.title , tbdescription.post_date , tbuser.first_name,tbdescription.view from tbdescription INNER JOIN tbuser ON tbuser.uid = tbdescription.uid order by des_id DESC limit ".(($pagin-1)*20).",20");
 			  }
 			  else{
 				  $rs=mysqli_query($con,"Select tbdescription.des_id , tbdescription.title , tbdescription.post_date , tbuser.first_name,tbdescription.view from tbdescription INNER JOIN tbuser ON tbuser.uid = tbdescription.uid where catid=".$catid." limit ".(($pagin-1)*20).",20"); 
@@ -118,9 +118,12 @@ if(isset($_GET['cat']))
                   <td>
                   	<?php echo $row[0]; ?>
                   </td>
-                  <td><a href="<?php echo $domain; ?>?admin&info=update&id=<?php echo $row[0]; ?>">
-             	    <?php echo $row[1]; ?>
-                  </a></td>
+                  <td><a href="<?php echo $domain; ?>?admin&info=update&id=<?php echo $row[0]; ?>" title="Edit">
+             	    <?php echo $row[1]; ?> 
+                  </a>
+                  <a href="<?php echo $domain; ?>?single=<?php echo $row[0]; ?>" title="view"  style="color:red;margin-left:10px;">View</a>
+                  <a href="<?php echo $domain; ?>?admin&info=update&id=<?php echo $row[0]; ?>" title="Edit"  style="color:red;margin-left:10px;">Edit</a>
+                </td>
                   <td>
                   	<?php echo $row[2]; ?>
                   </td>

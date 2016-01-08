@@ -106,6 +106,7 @@ body {
 }
 
 </style>
+<link rel="shortcut icon" type="image/png" href="img/logo.png" />
 </head>
 
 <body>
@@ -128,9 +129,11 @@ body {
         $password = stripslashes($password);
         $username = mysql_real_escape_string($username);
         $password = mysql_real_escape_string($password);
-        $rs=mysqli_query($con,"Select * from tbuser Where login_name='".$username."' AND password='".md5($password)."'");
+        $rs=mysqli_query($con,"Select uid from tbuser Where login_name='".$username."' AND password='".md5($password)."'");
         $count=0;
+        $uid=0;
         while($row=mysqli_fetch_array($rs)){
+            $uid=$row[0];
             $count=1;
         }
         if($count==0){
@@ -140,6 +143,7 @@ body {
             //password will expired in 30 days afte login in
             setcookie("khlathom_username", $username, time() + (86400 * 30),'/'); // 86400 = 1 day
             setcookie("khlathom_password", $password, time() + (86400 * 30),'/'); // 86400 = 1 day
+            setcookie("khlathom_userid", $uid, time() + (86400 * 30),'/'); // 86400 = 1 day
            // echo 'user name = '.$_COOKIE['khlathom_username'].' pwd ='.$_COOKIE['khlathom_password'];
             ?>
             <script type="text/javascript">

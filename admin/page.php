@@ -7,6 +7,7 @@
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="admin/css/bootstrap.min.css" rel="stylesheet">
+    <script src="ckeditor/ckeditor.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -70,7 +71,7 @@ if(isset($_GET['page'])){
       
       <div class="row row-offcanvas row-offcanvas-left">
         
-         <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
+         <div class="col-sm-3 col-md-2" id="sidebar" role="navigation">
            
             <ul class="nav nav-sidebar">
              <li class="active"><a href="<?php echo $domain; ?>">View site</a></li> 
@@ -90,7 +91,7 @@ if(isset($_GET['page'])){
         </div><!--/span-->
         
         <div class="col-sm-9 col-md-10 main">
-        <div class="col-sm-8 col-xs-12 col-md-7 col-lg-7">
+        <div class="col-sm-10 col-xs-12 col-md-10 col-lg-10">
            <h3><center><b>Page</b></center></h3><br/><br/>
             
 
@@ -99,10 +100,21 @@ if(isset($_GET['page'])){
             <form class="form-horizontal" method="post">
             <fieldset>
               <div class="form-group">
-                <label for="inputEmail" class="col-lg-2 control-label">Page</label>
-                <div class="col-lg-10">
+                <label for="inputEmail" class="col-lg-1 control-label">Page</label>
+                <div class="col-lg-11">
                   <input class="form-control" name="pagename" placeholder="Page Name" type="text" <?php if($pagename!='') echo 'value="'.$pagename.'"' ?> required>
                   <input type="hidden" name="ch"/>
+                </div>
+              </div>
+
+               <div class="form-group">
+                <label for="inputEmail" class="col-lg-1 control-label">Description</label>
+                <div class="col-lg-11">
+                  <textarea class="ckeditor" name="desc">
+                    <?php
+                    echo $description;
+                     ?>
+                  </textarea>
                 </div>
               </div>
 
@@ -129,12 +141,12 @@ function getback(){
 <?php
 if(isset($_POST['ch'])){
    include('config/config.php');
-   if($catid==''){
-     mysqli_query($con,"Insert into tbpage .... ");
+   if($pageid==''){
+     mysqli_query($con,"Insert into tbpage(pname,description) values('".$_POST['pagename']."','".$_POST['desc']."')");
      echo '<center><b style="color:blue;">Added success !</b></center>';
   }
   else{
-     mysqli_query($con,"update tbpage set .... ");
+     mysqli_query($con,"update tbpage set pname='".$_POST['pagename']."' , description='".$_POST['desc']."' where pid=".$pageid);
      echo '<center><b style="color:blue;">updated success !</b></center>';
   }
 }
@@ -147,7 +159,7 @@ if(isset($_POST['ch'])){
 
 
         </div>
-       <div class="col-sm-4 col-xs-12 col-md-5 col-lg-5">
+       <div class="col-sm-2 col-xs-12 col-md-2 col-lg-2">
          <h3><center><b>Category List</b></center></h3><br/><br/>
          <table class="table table-hover">
         
