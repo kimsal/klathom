@@ -627,8 +627,9 @@ a.socialIcon:hover, .socialHoverClass {
   transition: all 0.8s;
 }
 
-a {
- background-color: #D3D3D3;   
+a.social {
+ background-color: #CCC;   
+ opacity: 0.8;
 }
 			
 			
