@@ -9,7 +9,6 @@
                 <li><a class="social" href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
               </ul>
             </div>
-            <a href="">hello</a>
             <script type="text/javascript">
               $(document).ready(function(){
                 $(".dropdown-toggle").dropdown();

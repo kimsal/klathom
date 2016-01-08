@@ -61,7 +61,7 @@ $search=$_GET['s'];
                 </div>
            		 
                 <span class="col-xs-12 col-sm-6 col-md-6 col-lg-5 center_image">
-                	<img src="img/<?php echo $row[2]; ?>" class="img-responsive" title="<?php echo $row[1]; ?>"/>
+                	<img src="img/upload/<?php echo $row[2]; ?>" class="img-responsive" title="<?php echo $row[1]; ?>"/>
                 </span>
                 <span>	
                 	<?php

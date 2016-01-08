@@ -54,7 +54,7 @@ include('header.php');
               	?>
             	  <div>
             	  	<a href="<?php echo $domain ?>?single=<?php echo $row[0]; ?>" style="color:#FFF;">
-	                <img u=image src="img/<?php echo $row[2]; ?>" />
+	                <img u=image src="img/upload/<?php echo $row[2]; ?>" />
 	         	   </a>
 	                <div u="thumb"></div>
 	                <div u="caption" t="FADE" style="position: absolute; top: 215px; left: 0px;right:0px; min-width: 150px; min-height: 100px; color: #ffffff; font-size: 20px; text-align: left;padding:3px 10px;;background-image:url(img/2.png);">
@@ -119,7 +119,7 @@ include('header.php');
                     
                       <div id="effect-5" class="effects clearfix">
                           <div class="img">
-                                <img src="img/<?php echo $row[3]; ?>" alt="" class="img-responsive image_left"/>
+                                <img src="img/upload/<?php echo $row[3]; ?>" alt="" class="img-responsive image_left"/>
                                 <div class="overlay">
                                     <a href="#" class="expand">+</a>
                                     <a class="close-overlay hidden">-</a>
@@ -169,7 +169,7 @@ include('header.php');
                   <?php echo $row[1]; ?>
                 </div>
                 <span class="col-xs-12 col-sm-6 col-md-6 col-lg-5 center_image">
-                    <img src="img/<?php echo $row[3]; ?>" class="img-responsive"/>
+                    <img src="img/upload/<?php echo $row[3]; ?>" class="img-responsive"/>
                 </span>
                 <span>  
                    <?php  echo substr($row[2], 0, 370); ?>
@@ -202,14 +202,14 @@ include('header.php');
                     </b>
                 </div>
                  <?php
-         $rs=mysqli_query($con,"Select des_id,title,image,post_date from tbdescription where catid=11 order by des_id limit 4");
+         $rs=mysqli_query($con,"Select des_id,title,image,post_date from tbdescription where catid=11 order by des_id DESC limit 4");
           while($row=mysqli_fetch_array($rs)){
             ?>
              <!--Box left small latest post-->
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 latest_review_box">
                 <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 img_review">
                     <a href="<?php echo $domain;?>?single=<?php echo $row[0];?>">
-                        <img class="img_latest img-responsive" src="img/<?php echo $row[2]; ?>"></a>
+                        <img class="img_latest img-responsive" src="img/upload/<?php echo $row[2]; ?>"></a>
                 </div>
                 <div class="col-xs-6 col-sm-8 col-md-8 com-lg-8 latest_review_box_title">
                     <a href="<?php echo $domain;?>?single=<?php echo $row[0];?>"><?php echo $row[1]; ?></a>
@@ -237,7 +237,7 @@ include('header.php');
         	ព័ត៍មានទាន់ហេតុការណ៍
         </b>
          <?php
-         $rs=mysqli_query($con,"Select des_id,title,image,post_date from tbdescription order by des_id limit 12,6");
+         $rs=mysqli_query($con,"Select des_id,title,image,post_date from tbdescription order by des_id DESC limit 12,6");
           while($row=mysqli_fetch_array($rs)){
             ?>
             <!--box right-->
@@ -245,7 +245,7 @@ include('header.php');
                  <a href=" <?php echo $domain; ?>?single= <?php echo $row[0]; ?>">
                 <span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
                 
-                <img src="img/<?php echo $row[2]; ?>" class="img-responsive"/>
+                <img src="img/upload/<?php echo $row[2]; ?>" class="img-responsive"/>
                     
                      <div class="overlay">
                        
@@ -267,7 +267,7 @@ include('header.php');
             ចំរៀង
         </b>
          <?php
-         $rs=mysqli_query($con,"Select des_id,title,image,post_date from tbdescription where catid=7 order by des_id limit 10");
+         $rs=mysqli_query($con,"Select des_id,title,image,post_date from tbdescription where catid=7 order by des_id DESC limit 10");
           while($row=mysqli_fetch_array($rs)){
             ?>
             <!--box right-->
@@ -275,7 +275,7 @@ include('header.php');
                  <a href=" <?php echo $domain; ?>?single= <?php echo $row[0]; ?>">
                 <span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
                 
-                <img src="img/<?php echo $row[2]; ?>" class="img-responsive"/>
+                <img src="img/upload/<?php echo $row[2]; ?>" class="img-responsive"/>
                     
                      <div class="overlay">
                        
@@ -305,7 +305,7 @@ include('header.php');
                  <a href=" <?php echo $domain; ?>?single= <?php echo $row[0]; ?>">
                 <span class="col-xs-6 col-sm-5 col-md-5 col-lg-5 right_image img">
                 
-                <img src="img/<?php echo $row[2]; ?>" class="img-responsive"/>
+                <img src="img/upload/<?php echo $row[2]; ?>" class="img-responsive"/>
                     
                      <div class="overlay">
                        
