@@ -145,6 +145,19 @@
 
 
 //end slide
-
-		
+$(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('#scrolltop').fadeIn();           
+            } 
+            else {
+                $('#scrolltop').fadeOut();  
+            }
+    });
+    // scroll body to 0px on click
+    $('#scrolltop a').click(function () {
+        $('body,html').animate({scrollTop: 0});
+        return false;
+        });
+    });
 		
