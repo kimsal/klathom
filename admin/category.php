@@ -62,7 +62,7 @@ if(isset($_GET['catid'])){
       </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container-fluid"  style="padding:0px;">
       
       <div class="row row-offcanvas row-offcanvas-left">
         

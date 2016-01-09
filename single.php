@@ -2,7 +2,7 @@
 include('header.php');
 $single=$_GET['single'];
 ?>
-<div class="container">
+<div class="container" style="padding:0px">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="row" style="margin:0px;padding:0px; margin-top: 1px;">
             <div class=" col-sm-2 col-xs-12" style="padding:0px;background-color:#264C84; ">
@@ -58,16 +58,21 @@ $single=$_GET['single'];
              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                      <!--Sound-->
                 <div style="position:relative;width:60%;height:35px;overflow:hidden;margin:7px;float:left;">
-                  <div style="position:absolute;top:-270px;left:-5px;width:100%;">
+                  <div style="position:absolute;top:-270px;left:-5px;width:100%;" title="ស្តាប់">
                     <iframe style="width:100%;" height="300" 
-                      src="https://www.youtube.com/embed/S9hVbVJNDyc">
+                      src="https://www.youtube.com/embed/S9hVbVJNDyc"​ style="opacity:07;">
                     </iframe>
                   </div>
                 </div>
                  
-                 
-                <b​ style="color:#00C;font-size:25px;margin:5px 0px;font-weight:bold;">ស្តាប់សម្លេង</b>
-                
+                 <img src="img/sound.png" alt="ស្តាប់" onclick="listen();" class="img-responsive" style="width:180px;height:45px;cursor:pointer;"/>
+                <!--listen-->
+                <script type="text/javascript">
+                function listen(){
+                  //  alert('HELLO');
+                    //document.getElementById("vdo").click(); // Click 
+                }
+                </script>
             </div>
             
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 single_content">
@@ -76,14 +81,7 @@ $single=$_GET['single'];
             <img src="img/upload/<?php echo $row[3]; ?>" title="<?php echo $row[1]; ?>" class="img-responsive"/>
             <br/><br/>
 
-            <div style="position:relative;width:300px;height:45px;overflow:hidden;">
-  <div style="position:absolute;top:-276px;left:-5px">
-    <iframe width="300" height="300" 
-      src="https://www.youtube.com/embed/S9hVbVJNDyc">
-    </iframe>
-  </div>
-</div>
-            Posted date : <?php
+            ចុះ​ផ្សាយ​នៅ​ថ្ងៃ : <?php
                  $date=date_create($row[5]);
                  echo date_format($date,"y/m/d H:i:s"); 
                 ?>
@@ -127,7 +125,9 @@ $single=$_GET['single'];
                 ?>    
             </div>
         </div>      
-        
+        <!--facebook like page-->
+    <div class="fb-comments" data-href="<?php echo $domain.$_SERVER['REQUEST_URI']; ?>" data-numposts="5" style="width:100%;"></div>
+
     </div>
 
 
@@ -161,6 +161,7 @@ $single=$_GET['single'];
             <?php
         }
         ?>
+    
     </div>
     <!--end of right side-->
     

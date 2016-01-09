@@ -133,7 +133,7 @@ include('header.php');
                         <div class="post_date_left">
                            <?php
                              $date=date_create($row[4]);
-                             echo date_format($date,"y/m/d H:i:s"); 
+                             echo date_format($date,"d/M/Y H:i"); 
                              ?>
                         </div>
                         <div class="description_left">
@@ -216,7 +216,7 @@ include('header.php');
                     <div class="hidden-xs" style="color:#999;">
                         <?php
                          $date=date_create($row[3]);
-                         echo date_format($date,"y/m/d H:i:s"); 
+                        echo date_format($date,"d/M/Y H:i"); 
                         ?>
                     </div>
                 </div>

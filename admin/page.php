@@ -44,7 +44,7 @@ if(isset($_GET['page'])){
   //echo $pagename.' - '.$description;
 }
 ?>
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -67,7 +67,7 @@ if(isset($_GET['page'])){
       </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container-fluid"  style="padding:0px;">
       
       <div class="row row-offcanvas row-offcanvas-left">
         

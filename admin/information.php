@@ -69,9 +69,9 @@ if(isset($_GET['id'])){
       </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container-fluid" style="padding:0px;">
       
-      <div class="row row-offcanvas row-offcanvas-left">
+      <div class="row row-offcanvas row-offcanvas-left"  style="padding:0px;">
         
          <div class="col-sm-3 col-md-2" id="sidebar" role="navigation">
            
@@ -92,7 +92,7 @@ if(isset($_GET['id'])){
             </ul>   
         </div><!--/span-->
         
-        <div class="col-sm-9 col-md-10 main">
+        <div class="col-sm-9 col-md-10 main" >
             <div class="col-sm-11 col-xs-12 col-md-11 col-lg-11">
            <h3><center><b>Information page</b></center></h3><br/><br/>
             
