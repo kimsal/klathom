@@ -128,7 +128,6 @@ body {
         include('config/config.php');
         $username=$_POST['username'];
         $password=$_POST['password'];
-      
         $rs=mysqli_query($con,"Select uid from tbuser Where login_name='".$username."' AND password='".md5($password)."'");
         $count=0;
         $uid=0;

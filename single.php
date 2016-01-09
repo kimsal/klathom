@@ -62,9 +62,10 @@ $single=$_GET['single'];
                    <?php echo $row[7]; ?>
                   </div>
                 </div>
-                 
+                <span class="width:100%;">
                  <img src="img/sound.png" alt="ស្តាប់" onclick="listen();" class="img-responsive" style="width:180px;height:45px;cursor:pointer;"/>
                 <!--listen-->
+                </span>
                 <script type="text/javascript">
                 function listen(){
                   //  alert('HELLO');
@@ -81,7 +82,7 @@ $single=$_GET['single'];
 
             ចុះ​ផ្សាយ​នៅ​ថ្ងៃ : <?php
                  $date=date_create($row[5]);
-                 echo date_format($date,"y/m/d H:i:s"); 
+                 echo date_format($date,"d/M/Y H:i"); 
                 ?>
             </div>
             <?php

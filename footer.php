@@ -51,6 +51,11 @@
                   <?php
                 }
               ?>
+              <li class="listfooter">
+                    <a href="<?php echo $domain; ?>?admin">
+                        <label id="leg1" style="cursor:pointer;">Login</label>
+                    </a>
+                </li>
               </ul>
             </div>
             <!--end of footer-->
