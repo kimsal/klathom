@@ -198,8 +198,12 @@ if($_POST['btn']!='Delete'){
   $newcatid=$_POST['category'];
   $uploadOk=1;
 
-  $newsound=str_replace("<","&lt;",$_POST['sound']);
-  $newsound=str_replace(">","&gt;",$newsound);
+   $newsound=str_replace('"',"",$_POST['sound']);
+  $newsound=str_replace('width=640','style=width:100%;',$newsound);
+ $newsound=str_replace('360','300',$newsound);
+
+  
+  
   //echo $newimage.'='.$newtitle.'='.$newdes.'='.$newcatid.'='.$newsound;
   if($newimage!=$image){
     $target_dir = "img/upload/";

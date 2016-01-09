@@ -59,9 +59,7 @@ $single=$_GET['single'];
                      <!--Sound-->
                 <div style="position:relative;width:60%;height:35px;overflow:hidden;margin:7px;float:left;">
                   <div style="position:absolute;top:-270px;left:-5px;width:100%;" title="ស្តាប់">
-                    <iframe style="width:100%;" height="300" 
-                      src="https://www.youtube.com/embed/S9hVbVJNDyc"​ style="opacity:07;">
-                    </iframe>
+                   <?php echo $row[7]; ?>
                   </div>
                 </div>
                  
