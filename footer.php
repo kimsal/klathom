@@ -1,9 +1,9 @@
-  <div class="col-xs-12 col-md-12 col-sm-12 myfoot">
+f  <div class="col-xs-12 col-md-12 col-sm-12 myfoot">
             <!--footer-->
             <div class="col-sm-4 col-xs-12  col-md-4">
               <ul class="social-network social-circle">
                 <li><a class="social" href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
-                <li><a class="social" href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="social" href="https://www.facebook.com/khlathom.net/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                 <li><a class="social" href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
                 <li><a class="social" href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
                 <li><a class="social" href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
