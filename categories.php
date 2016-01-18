@@ -16,7 +16,7 @@ else
                     <ul style="margin-top: 7px; ">
 
                     	<?php
-		                 $rs=mysqli_query($con,"Select des_id,title from tbdescription order by des_id limit 10");
+		                 $rs=mysqli_query($con,"Select des_id,title from tbdescription order by des_id desc limit 10");
 		                  while($row=mysqli_fetch_array($rs)){
 		                    ?>
 			                  <li style="display: inline; margin-left: 2px;">
@@ -40,9 +40,9 @@ else
     	$catid=$_GET['cat'];
     	$help=0;
       if($catid==0)
-         $rs=mysqli_query($con,"Select des_id,title,image,description,post_date from tbdescription limit ".(($pagin-1)*12).',12');
+         $rs=mysqli_query($con,"Select des_id,title,image,description,post_date from tbdescription order by des_id DESC limit ".(($pagin-1)*12).',12');
       else
-         $rs=mysqli_query($con,"Select des_id,title,image,description,post_date from tbdescription where catid=".$catid.' limit '.(($pagin-1)*12).',12');
+         $rs=mysqli_query($con,"Select des_id,title,image,description,post_date from tbdescription where catid=".$catid.' order by des_id DESC limit '.(($pagin-1)*12).',12');
         while($row=mysqli_fetch_array($rs)){
         	if($help==3){
         		?>
