@@ -249,7 +249,7 @@ if($uploadOk!=0){
     echo '<h3 style="color:blue">Inserted successfully</h3>';
   }
   else{
-    mysqli_query($con,"update tbdescription set title='".$newtitle."',description='".$newdes."',image='".$newimage."',catid=".$newcatid.",uid=".$_COOKIE['khlathom_userid'].",sound='".$newsound."',updated_date=now() where des_id=".$des_id);
+    mysqli_query($con,"update tbdescription set title='".$newtitle."',description='".$newdes."',image='".$newimage."',catid=".$newcatid.",sound='".$newsound."',updated_date=now() where des_id=".$des_id);
     echo '<h3 style="color:blue">Updated successfully</h3>';
   }
  }  

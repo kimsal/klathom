@@ -4,7 +4,7 @@ include('header.php');
 
 <div class="container">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="row" style="margin:0px;padding:0px; margin-top: 1px;">
+        <div class="row" style="margin:0px;padding:0px; margin-top: 0px;">
             <div class=" col-sm-2 col-xs-12" style="padding:0px;background-color:#264C84; ">
                 <h4 style=" text-align:center;color: #ffffff">Breaking News</h4>
             </div>
@@ -231,7 +231,7 @@ include('header.php');
         </div>     
         
     </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 right">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 right​" style="margin-top:5px;"> 
     
     	<b class="btn btn-primary col-sm-12 col-xs-12 col-md-12 col-lg-12" style="cursor:default;">
         	ព័ត៍មានទាន់ហេតុការណ៍
@@ -267,7 +267,7 @@ include('header.php');
             ចំរៀង
         </b>
          <?php
-         $rs=mysqli_query($con,"Select des_id,title,image,post_date from tbdescription where catid=7 order by des_id DESC limit 10");
+         $rs=mysqli_query($con,"Select des_id,title,image,post_date from tbdescription where catid=4 order by des_id DESC limit 10");
           while($row=mysqli_fetch_array($rs)){
             ?>
             <!--box right-->
@@ -292,8 +292,8 @@ include('header.php');
           }
           ?>
 
-
-          <b class="btn btn-primary col-sm-12  col-xs-12 col-md-12 col-lg-12" style="cursor:default;border:none;">
+        
+           <b class="btn btn-primary col-sm-12  col-xs-12 col-md-12 col-lg-12" style="cursor:default;">
             កីឡា
         </b>
          <?php

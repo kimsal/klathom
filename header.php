@@ -41,6 +41,7 @@
 <?php
 include('config/config.php');
 ?>
+<!--
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 hidden-xs" id="banner_top">
     <center>
         <img src="img/logo.png" class="img-responsive" style="height:90px;margin-top:10px;"/>
@@ -50,6 +51,7 @@ include('config/config.php');
 <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" id="banner_top">
     <img src="img/banner-468x60.jpg" class="img-responsive" style="height:90px;margin-top:10px;"/>
 </div>
+-->
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="menu_top1">
     <!--sart menu 1-->
     <nav class="navbar-default" role="navigation" style="background-color: #F6F6F6">
@@ -64,20 +66,21 @@ include('config/config.php');
         </div>
         <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav myover" >
-                <li><a href="<?php echo $domain; ?>">ទំព័រដើម</a></li>  
+                 <li>
+                    <img src="img/logo.png" title="ខ្លាធំ" style="width:60px;height:60px;padding:0px;margin:0px;"/>
+                 </li>  
+                <li><a href="<?php echo $domain; ?>" style="color:#000;font-weight:bold;" class="glyphicon glyphicon-home"></a></li>  
 
                 <?php
                  $rs=mysqli_query($con,"Select * from tbcategory");
                   while($row=mysqli_fetch_array($rs)){
                     ?>
-                    <li><a href="<?php echo $domain; ?>?cat=<?php echo $row[0] ?>"> 
+                    <li><a href="<?php echo $domain; ?>?cat=<?php echo $row[0] ?>" style="color:#000;font-weight:bold;">  
                         <?php echo $row[1]; ?>
                     </a></li>
                     <?php
                   }
                 ?>
-
-                
                 
             </ul>
             <div class="col-sm-3 col-md-3 pull-right">
@@ -94,4 +97,5 @@ include('config/config.php');
     </nav>
     <!--end of menu 1-->
 </div>
-<div style="clear: both;float: none;"></div>
+<div style="clear: both;float: none;margin-top:50px;"></div>
+
