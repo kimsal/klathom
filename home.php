@@ -121,7 +121,7 @@ include('header.php');
                           <div class="img">
                                 <img src="img/upload/<?php echo $row[3]; ?>" alt="" class="img-responsive image_left"/>
                                 <div class="overlay">
-                                    <a href="#" class="expand">+</a>
+                                    <a href="<?php echo $domain; ?>?single=<?php echo $row[0]; ?>" class="expand">+</a>
                                     <a class="close-overlay hidden">-</a>
                                 </div>
                           </div>
