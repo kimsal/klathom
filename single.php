@@ -5,7 +5,7 @@ $single=$_GET['single'];
 <div class="container" style="padding:0px">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="row" style="margin:0px;padding:0px; margin-top: 1px;">
-            <div class=" col-sm-2 col-xs-12" style="padding:0px;background-color:#264C84; ">
+            <div class=" col-sm-2 col-xs-12" style="padding:0px;background-color:#076AB8; ">
                 <h4 style=" text-align:center;color: #ffffff">Breaking News</h4>
             </div>
             <div class=" col-sm-9 col-xs-12 mymarq " >
@@ -28,7 +28,7 @@ $single=$_GET['single'];
                 </marquee>
 
             </div>
-            <div class="col-xs-12 col-sm-1 col-lg-1 col-md-1 hidden-xs"  style="padding:0px;background-color: #264C84">
+            <div class="col-xs-12 col-sm-1 col-lg-1 col-md-1 hidden-xs"  style="padding:0px;background-color:#076AB8;">
                 <h4 style=" text-align:center;color: #ffffff">ព័ត៏មានថ្មី</h4>
             </div>
         </div>

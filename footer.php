@@ -25,7 +25,7 @@
                     $rs=mysqli_query($con,"Select * from tbcategory");
                     while($row=mysqli_fetch_array($rs)){
                   ?>
-                    <li>   
+                    <li >
                       <a id="leg1" style="cursor:pointer;" href="<?php echo $domain; ?>?cat=<?php echo $row[0]; ?>">
                         <?php echo $row[1]; ?>
                       </a>
@@ -45,7 +45,7 @@
                   ?>
                  <li class="listfooter">
                       <a href="<?php echo $domain; ?>?page=<?php echo $row[0]; ?>">
-                          <label id="leg1" style="cursor:pointer;"><?php echo $row[1]; ?></label>
+                          <label id="leg1" style="cursor:pointer; color: #ffffff;"><?php echo $row[1]; ?></label>
                       </a>
                   </li>
                   <?php
@@ -53,7 +53,7 @@
               ?>
               <li class="listfooter">
                     <a href="<?php echo $domain; ?>?admin">
-                        <label id="leg1" style="cursor:pointer;">Login</label>
+                        <label id="leg1" style="cursor:pointer; color: #ffffff;">Login</label>
                     </a>
                 </li>
               </ul>

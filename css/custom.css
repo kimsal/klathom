@@ -26,8 +26,9 @@ body{
     background-color:#FFFFFF;
 }
 #menu_top1{
-border-bottom:1px dotted #999999;
+border-bottom:2px solid #999999;
     padding:0px;
+
 }
 #menu_top2{
 height:40px;
@@ -338,13 +339,14 @@ a.expand {
 .myover li{
     font-size: 15px;
     font-weight: 500;
+    background-color: #076AB8;
 }
 .myover{
     padding-left: 85px;
 }
 .myover li:hover{
-    color: #ffffff;
-    background-color:#ced0cd;
+    background-color:#282460;
+    opacity: 0.80;
 }
 .myover li a:hover{
     color: #ffffff;
@@ -354,7 +356,7 @@ a.expand {
 
 /*footer  */
 .myfoot{
-    background-color:#333333;
+    background-color: #076AB8;
     padding-top: 30px;
     padding-bottom: 90px;
 	margin-bottom:10px;

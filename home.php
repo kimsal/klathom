@@ -4,9 +4,9 @@ include('header.php');
 
 <div class="container">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="row" style="margin:0px;padding:0px; margin-top: 0px;">
-            <div class=" col-sm-2 col-xs-12" style="padding:0px;background-color:#264C84; ">
-                <h4 style=" text-align:center;color: #ffffff">Breaking News</h4>
+        <div class="row" style="margin:0px;padding:0px; margin-top: 0px;background-color: #076AB8;">
+            <div class=" col-sm-2 col-xs-12" style="padding:0px;background-color: #076AB8;">
+                <h4 style=" text-align:center;color: #ffffff;">Breaking News</h4>
             </div>
             <div class=" col-sm-9 col-xs-12 mymarq " >
                 <marquee behavior="scroll" scrollamount="3" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
@@ -28,7 +28,7 @@ include('header.php');
                 </marquee>
 
             </div>
-            <div class="col-xs-12 col-sm-1 col-lg-1 col-md-1 hidden-xs"  style="padding:0px;background-color: #264C84">
+            <div class="col-xs-12 col-sm-1 col-lg-1 col-md-1 hidden-xs"  style="padding:0px;background-color:#076AB8">
                 <h4 style=" text-align:center;color: #ffffff">ព័ត៏មានថ្មី</h4>
             </div>
         </div>
@@ -231,9 +231,23 @@ include('header.php');
         </div>     
         
     </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 right​" style="margin-top:5px;"> 
+     <div class="col-sm-4 col-md-4 pull-right" style="background-color:#0765AE;">
+                <form class="navbar-form" role="search" method="get">
+                    <div class="input-group" style="width:100%;">
+                        <input type="text" class="form-control" placeholder="ស្វែងរក . . ." name="s" >
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
     
-    	<b class="btn btn-primary col-sm-12 col-xs-12 col-md-12 col-lg-12" style="cursor:default;">
+    
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 right​" style="margin-top:5px;"> 
+    	
+       
+    	<b class="col-sm-12 col-xs-12 col-md-12 col-lg-12" style="cursor:default;color: #000000;margin: 0px;">
         	ព័ត៍មានទាន់ហេតុការណ៍
         </b>
          <?php
