@@ -44,7 +44,7 @@ include('config/config.php');
 
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 hidden-xs" id="banner_top">
     <center>
-        <img src="img/logo.png" class="img-responsive" style="height:90px;margin-top:10px;"/>
+        <img src="img/upload/banner-468x60.jpg" class="img-responsive" style="height:90px;margin-top:10px;"/>
     </center> 
 
 </div>

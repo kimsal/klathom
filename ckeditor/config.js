@@ -9,12 +9,12 @@ CKEDITOR.editorConfig = function( config ) {
 	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
 
 	// The toolbar groups arrangement, optimized for two toolbar rows.
-  config.filebrowserBrowseUrl = 'http://localhost:88/klathom/kcfinder/browse.php?opener=ckeditor&type=files';
-   config.filebrowserImageBrowseUrl = 'http://localhost:88/klathom/kcfinder/browse.php?opener=ckeditor&type=images';
-   config.filebrowserFlashBrowseUrl = 'http://localhost:88/klathom/kcfinder/browse.php?opener=ckeditor&type=flash';
-   config.filebrowserUploadUrl = 'http://localhost:88/klathom/kcfinder/upload.php?opener=ckeditor&type=files';
-   config.filebrowserImageUploadUrl = 'http://localhost:88/klathom/kcfinder/upload.php?opener=ckeditor&type=images';
-   config.filebrowserFlashUploadUrl = 'http://localhost:88/klathom/kcfinder/upload.php?opener=ckeditor&type=flash';
+  config.filebrowserBrowseUrl = 'http://localhost:8081/klathom/kcfinder/browse.php?opener=ckeditor&type=files';
+   config.filebrowserImageBrowseUrl = 'http://localhost:8081/klathom/kcfinder/browse.php?opener=ckeditor&type=images';
+   config.filebrowserFlashBrowseUrl = 'http://localhost:8081/klathom/kcfinder/browse.php?opener=ckeditor&type=flash';
+   config.filebrowserUploadUrl = 'http://localhost:8081/klathom/kcfinder/upload.php?opener=ckeditor&type=files';
+   config.filebrowserImageUploadUrl = 'http://localhost:8081/klathom/kcfinder/upload.php?opener=ckeditor&type=images';
+   config.filebrowserFlashUploadUrl = 'http://localhost:8081/klathom/kcfinder/upload.php?opener=ckeditor&type=flash';
 
 
 	config.toolbarGroups = [
