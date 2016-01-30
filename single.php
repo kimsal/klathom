@@ -55,24 +55,28 @@ $single=$_GET['single'];
                      <div class="fb-like" data-href="<?php echo $domain.$_SERVER['REQUEST_URI']; ?>" data-width="100%" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
                  </ol>
             </div>
-             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                     <!--Sound-->
-                <div style="position:relative;width:60%;height:35px;overflow:hidden;margin:7px;float:left;">
-                  <div style="position:absolute;top:-270px;left:-5px;width:100%;" title="ស្តាប់">
-                   <?php echo $row[7]; ?>
-                  </div>
+              <?php if($row[7]!=''){ ?>
+                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                         <!--Sound-->
+                    <div style="position:relative;width:60%;height:35px;overflow:hidden;margin:7px;float:left;">
+                      <div style="position:absolute;top:-270px;left:-5px;width:100%;" title="ស្តាប់">
+                       <?php
+                       if($row[7]<0){echo "";}
+                       else{
+                           echo $row[7];
+                           ?>
+                          <?php
+                           }
+                       ?>
+                      </div>
+                    </div>
+
+                    <span class="width:100%;">
+                     <img src="img/sound.png" alt="ស្តាប់" onclick="listen();" class="img-responsive" style="width:180px;height:45px;cursor:pointer;"/>
+                    <!--listen-->
+                    </span>
                 </div>
-                <span class="width:100%;">
-                 <img src="img/sound.png" alt="ស្តាប់" onclick="listen();" class="img-responsive" style="width:180px;height:45px;cursor:pointer;"/>
-                <!--listen-->
-                </span>
-                <script type="text/javascript">
-                function listen(){
-                  //  alert('HELLO');
-                    //document.getElementById("vdo").click(); // Click 
-                }
-                </script>
-            </div>
+                <?php  } ?>
             
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 single_content">
             <?php echo $row[2]; ?>
