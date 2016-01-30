@@ -73,7 +73,7 @@ include('config/config.php');
                  $rs=mysqli_query($con,"Select * from tbcategory");
                   while($row=mysqli_fetch_array($rs)){
                     ?>
-                    <li><a href="<?php echo $domain; ?>?cat=<?php echo $row[0] ?>" style="color:white;font-weight:bold;
+                    <li><a href="<?php echo $domain; ?>?cat=<?php echo $row[0] ?>" style="color:white;font-weight:bold;font-family:'Khmer OS Muol Light';
                     border-left:2px solid #E9EAED;
                     ">
                         <?php echo $row[1]; ?>

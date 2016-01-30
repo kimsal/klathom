@@ -104,7 +104,7 @@ body {
 <body>
     <?php
     include('admin/checklogin.php');
-    echo $checklogin;
+   // echo $checklogin;
     if($checklogin==1){
         ?>
         <script type="text/javascript">

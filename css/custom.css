@@ -72,7 +72,7 @@ background-color:#CC3;
 }
 .latest_review_box a{
 	color: #232323;
-	font-size: 16px;
+	font-size: 15px;
 	font-family: "Titillium Web",sans-serif;
 }
 .latest_review_box a:hover {
@@ -164,7 +164,7 @@ div div .mymarq{
 	padding:17px 2px;
 }
 .title_left{
-	font-size:18px;
+	font-size:15px;
 	margin-top:10px;
 	cursor:pointer;
 }
@@ -426,7 +426,7 @@ padding:0px;
 	margin:0px;
 }
 .right_title{
-	font-size:16px;	
+	font-size:15px;	
 	padding-top:0px;
 	padding-bottom:10px;
 	padding-left:10px;
@@ -515,9 +515,9 @@ margin:0px;
 }
 /*css for single page*/
 .single_title{
-	font-size:20px;
+	font-size:16px;
 	font-weight:bold;
-	color:#006;
+	color:#002;
 	margin:15px 10px;
 	padding-top:10px;	
 	line-height:30px;
