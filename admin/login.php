@@ -1,7 +1,15 @@
-<?php
-    ob_start(); // Initiate the output buffer
-?>
 <!DOCTYPE html>
+<?php
+    include('admin/checklogin.php');
+    echo $checklogin;
+    if($checklogin==1){
+        ?>
+        <script type="text/javascript">
+           location.href = "<?php echo $domain; ?>?admin=1";
+        </script>
+        <?php
+    }
+?>
 <html>
 <head>
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -102,17 +110,6 @@ body {
 </head>
 
 <body>
-    <?php
-    include('admin/checklogin.php');
-   // echo $checklogin;
-    if($checklogin==1){
-        ?>
-        <script type="text/javascript">
-           location.href = "<?php echo $domain; ?>?admin=1";
-        </script>
-        <?php
-    }
-?>
 
 <div class="logo"></div>
 <div class="login-block">
@@ -128,6 +125,10 @@ body {
         include('config/config.php');
         $username=$_POST['username'];
         $password=$_POST['password'];
+        $username = stripslashes($username);
+        $password = stripslashes($password);
+        $username = mysql_real_escape_string($username);
+        $password = mysql_real_escape_string($password);
         $rs=mysqli_query($con,"Select uid from tbuser Where login_name='".$username."' AND password='".md5($password)."'");
         $count=0;
         $uid=0;
@@ -157,7 +158,3 @@ body {
 </body>
 
 </html>
-
-<?php
-    ob_end_flush(); // Flush the output from the buffer
-?>
